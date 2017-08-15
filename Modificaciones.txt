@@ -1,0 +1,33 @@
+Limite imagenes por piso --> 30-40  (Aviso a partir de 30 que se acerca al máximo)
+
+Añadir tabla de chat --> De comercial a cliente
+
+
+Requisitos funcionales
+
+----------------------------------------------
+
+Registro de usuario
+
+Registro de comercial
+
+Preferencias de búsqueda de usuario
+
+Chat entre comercial y usuario
+
+El comercial puede dar de alta pisos, garages, terrenos...
+
+El comercial puede relacionar un usario con un piso, garage...
+
+Alertas
+-----------------------------------
+Avisar al usuario de que después de un mes de inactividad de bloqueará
+
+Se tiene que desactivar al usuario después de 30 días de inactividad.
+
+Un comercial puede buscar usuarios 
+
+-------------------------------------------------------------------------------------------------
+
+Crear storeProcedure que desactive usuarios --> Cada día debería de ejecutarse un storProcedure que mire si el usuairo lleva un mes o mas sin iniciar sesión, en ese caso actualizar el campo de estado a 0
+

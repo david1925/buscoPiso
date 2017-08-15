@@ -1,0 +1,6 @@
+SELECT road_types.name,floors.address,municipalities.name,provinces.name,autonomous_communities.name,countries.name FROM floors
+INNER JOIN road_types ON road_types.roadType_id_roadType=floors.road_types_roadType_id_roadType
+INNER JOIN municipalities on municipalities.idmunicipalities=floors.municipalities_idmunicipalities
+INNER JOIN provinces ON provinces.idprovinces=municipalities.provinces_idprovinces
+INNER JOIN autonomous_communities ON autonomous_communities.idautonomous_communities=provinces.autonomous_communities_idautonomous_communities
+INNER JOIN countries ON countries.idcountries=autonomous_communities.countries_idcountries
