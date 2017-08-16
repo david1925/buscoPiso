@@ -8310,3 +8310,5 @@ INSERT INTO offices (price,square_meters,publication_date,address,local,warehous
 /*INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Falsa 123 89",0,0,0,1,1,4000,2);
 INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",1,1,0,1,1,4500,3);
 INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",0,0,1,1,1,4700,4);*/
+
+/***************lands***************/
