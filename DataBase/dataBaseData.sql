@@ -59,15 +59,15 @@ VALUES
 	("Otros");
 
 /***************users***************/
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("David","García","Gómez","david.gargom.94@gmail.com",679614436,"",1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortivas@gmail.com",687727135,"",1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Oriol","Gual","Rovirosa","fcbgual@gmail.com",675647374,"",1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Registrado","ApellidoRegistrado","SegundoApellidoRegistrado","registrado@mailinator.com",111222333,"Busco un piso en la zona de Hospitalet",2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Registrado2","ApellidoRegistrado2","SegundoApellidoRegistrado2","registrado2@mailinator.com",333222111,"Busco un piso en la zona de Esplugas",2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Registrado3","ApellidoRegistrado3","SegundoApellidoRegistrado3","registrado3@mailinator.com",444555666,"Busco un piso en la zona de Cornellá",2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Empresa","ApellidoEmpresa","SegundoApellidoEmpresa","empresa@mailinator.com",666555444,"",3);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Empresa2","ApellidoEmpresa2","SegundoApellidoEmpresa2","empresa2@mailinator.com",555444666,"",3);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,groups_groups_id_group) VALUES ("Empresa3","ApellidoEmpresa3","SegundoApellidoEmpresa3","empresa3@mailinator.com",222111333,"",3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("David","García","Gómez","david.gargom.94@gmail.com",679614436,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortivas@gmail.com",687727135,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Oriol","Gual","Rovirosa","fcbgual@gmail.com",675647374,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado","ApellidoRegistrado","SegundoApellidoRegistrado","registrado@mailinator.com",111222333,"Busco un piso en la zona de Hospitalet",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado2","ApellidoRegistrado2","SegundoApellidoRegistrado2","registrado2@mailinator.com",333222111,"Busco un piso en la zona de Esplugas",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado3","ApellidoRegistrado3","SegundoApellidoRegistrado3","registrado3@mailinator.com",444555666,"Busco un piso en la zona de Cornellá",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa","ApellidoEmpresa","SegundoApellidoEmpresa","empresa@mailinator.com",666555444,"",1,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa2","ApellidoEmpresa2","SegundoApellidoEmpresa2","empresa2@mailinator.com",555444666,"",1,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa3","ApellidoEmpresa3","SegundoApellidoEmpresa3","empresa3@mailinator.com",222111333,"",0,3);
 
 
 /***************autonomous_communities***************/
@@ -8306,8 +8306,8 @@ INSERT INTO type_of_building (name) VALUES ("Uso mixto");
 INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (1,1,1,1,1,1,1);
 
 /***************offices***************/
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44",1,1,1,1,1,4254,1);
-/*INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Falsa 123 89",0,0,0,1,1,4000,2);
+/*INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44",1,1,1,1,1,4254,1);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Falsa 123 89",0,0,0,1,1,4000,2);
 INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",1,1,0,1,1,4500,3);
 INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",0,0,1,1,1,4700,4);*/
 
