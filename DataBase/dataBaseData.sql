@@ -8269,7 +8269,7 @@ VALUES
 	(48,914,5,'Arratzu'),
 	(48,915,8,'Ziortza-Bolibar');
 
-/***************floors***************/
+/***************floors_conditions***************/
 INSERT INTO floor_conditions (name) VALUES ("Obra nueva");
 INSERT INTO floor_conditions (name) VALUES ("Reformado");
 INSERT INTO floor_conditions (name) VALUES ("Buen estado");
@@ -8304,12 +8304,65 @@ INSERT INTO type_of_building (name) VALUES ("Uso mixto");
 
 /***************office_features***************/
 INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (1,1,1,1,1,1,1);
+INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (0,0,0,0,0,0,0);
+INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (0,0,0,0,0,1,1);
+INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (1,1,1,1,1,0,0);
 
 /***************offices***************/
-/*INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44",1,1,1,1,1,4254,1);
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Falsa 123 89",0,0,0,1,1,4000,2);
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",1,1,0,1,1,4500,3);
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",0,0,1,1,1,4700,4);*/
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 33",1,1,1,1,1,4254,1,2);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Falsa 123 89",0,2,2,1,1,4000,2,2);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",1,3,3,1,1,4500,3,2);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",0,2,1,1,1,4700,4,18);
 
-/***************lands***************/
-/**Comentario para la tabla de lands*********/
+/***************floors_users***************/
+INSERT INTO floors_users(users_users_id_user,floors_idfloors) VALUES (4,1);
+INSERT INTO floors_users(users_users_id_user,floors_idfloors) VALUES (5,2);
+INSERT INTO floors_users(users_users_id_user,floors_idfloors) VALUES (6,3);
+INSERT INTO floors_users(users_users_id_user,floors_idfloors) VALUES (7,4);
+
+/***************users_images***************/
+INSERT INTO users_images (name,users_users_id_user) VALUES ("1.jpg",1);
+INSERT INTO users_images (name,users_users_id_user) VALUES ("2.jpg",2);
+INSERT INTO users_images (name,users_users_id_user) VALUES ("3.jpg",3);
+INSERT INTO users_images (name,users_users_id_user) VALUES ("4.jpg",4);
+INSERT INTO users_images (name,users_users_id_user) VALUES ("5.jpg",5);
+INSERT INTO users_images (name,users_users_id_user) VALUES ("6.jpg",6);
+
+/***************floors_images***************/
+INSERT INTO floors_images (name,floors_idfloors) VALUES ("floor1.jpg",1);
+INSERT INTO floors_images (name,floors_idfloors) VALUES ("floor2.jpg",2);
+INSERT INTO floors_images (name,floors_idfloors) VALUES ("floor3.jpg",3);
+INSERT INTO floors_images (name,floors_idfloors) VALUES ("floor4.jpg",4);
+
+/***************offices_search_users***************/
+INSERT INTO offices_search_users (price,type_of_contract_idtype_of_contract) VALUES (2000,1);
+INSERT INTO offices_search_users (price,type_of_contract_idtype_of_contract) VALUES (20000,2);
+INSERT INTO offices_search_users (distribution_iddistribution) VALUES (1);
+INSERT INTO offices_search_users (type_of_building_idtype_of_building) VALUES (1);
+
+/***************business_office***************/
+INSERT INTO business_office (tradename,logo,area_of_action,office_description,office_foto,address,municipalities_idmunicipalities) VALUES ("Primera oficina","logobussinessoffice1.jpg","Area de acción","Descripción de oficina","businessoffice1.jpg","Falsa 123",1);
+INSERT INTO business_office (tradename,logo,area_of_action,office_description,office_foto,address,municipalities_idmunicipalities) VALUES ("Segunda oficina","logobussinessoffice2.jpg","Area de acción","Descripción de segunda oficina","businessoffice2.jpg","Falsa 321",2);
+INSERT INTO business_office (tradename,logo,area_of_action,office_description,office_foto,address,municipalities_idmunicipalities) VALUES ("Tercera oficina","logobussinessoffice3.jpg","Area de acción","Descripción de tercera oficina","businessoffice3.jpg","Falsa 213",3);
+INSERT INTO business_office (tradename,logo,area_of_action,office_description,office_foto,address,municipalities_idmunicipalities) VALUES ("Cuarta oficina","logobussinessoffice4.jpg","Area de acción","Descripción de cuarta oficina","businessoffice4.jpg","Falsa 312",4);
+
+/***************contracts***************/
+INSERT INTO contracts (tradename,tax_name,cif_nif,contact_person,email,domicile,postal_code,business_office_idoffice) VALUES ("Nombre de oficina","Razón social","Q9182039I","Persona de contacto","oficina@oficina.com","Dirección oficina",08901,1);
+
+/***************UPDATES***************/
+/***************update idoffice search on users table***************/
+UPDATE users
+SET users.offices_search_users_idoffices=1
+WHERE users.users_id_user=1;
+
+UPDATE users
+SET users.offices_search_users_idoffices=2
+WHERE users.users_id_user=2;
+
+UPDATE users
+SET users.offices_search_users_idoffices=3
+WHERE users.users_id_user=3;
+
+UPDATE users
+SET users.offices_search_users_idoffices=4
+WHERE users.users_id_user=4;
