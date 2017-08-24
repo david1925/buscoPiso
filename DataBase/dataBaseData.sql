@@ -8289,7 +8289,7 @@ INSERT INTO additional_features (air_conditioner,built_in_wardrobe,elevator,exte
 INSERT INTO additional_features (air_conditioner,built_in_wardrobe,elevator,exterior,parking,garden,pool,storage_room,community_zone,gym,floors_idfloors) VALUES(0,0,0,0,0,0,1,1,1,1,4);
 
 /***************floors_search_users***************/
-INSERT INTO floors_search_users (price,square_meters,bedrooms,type_of_contract_idtype_of_contract) VALUES (500,80,1,1);
+INSERT INTO floors_search_users (price,square_meters,bedrooms,type_of_contract_idtype_of_contract,users_users_id_user) VALUES (500,80,1,1,1);
 
 
 /***************distribution***************/
@@ -8335,10 +8335,10 @@ INSERT INTO floors_images (name,floors_idfloors) VALUES ("floor3.jpg",3);
 INSERT INTO floors_images (name,floors_idfloors) VALUES ("floor4.jpg",4);
 
 /***************offices_search_users***************/
-INSERT INTO offices_search_users (price,type_of_contract_idtype_of_contract) VALUES (2000,1);
-INSERT INTO offices_search_users (price,type_of_contract_idtype_of_contract) VALUES (20000,2);
-INSERT INTO offices_search_users (distribution_iddistribution) VALUES (1);
-INSERT INTO offices_search_users (type_of_building_idtype_of_building) VALUES (1);
+INSERT INTO offices_search_users (price,type_of_contract_idtype_of_contract,users_users_id_user) VALUES (2000,1,1);
+INSERT INTO offices_search_users (price,type_of_contract_idtype_of_contract,users_users_id_user) VALUES (20000,2,2);
+INSERT INTO offices_search_users (distribution_iddistribution,users_users_id_user) VALUES (1,3);
+INSERT INTO offices_search_users (type_of_building_idtype_of_building,users_users_id_user) VALUES (1,4);
 
 /***************business_office***************/
 INSERT INTO business_office (tradename,logo,area_of_action,office_description,office_foto,address,municipalities_idmunicipalities) VALUES ("Primera oficina","logobussinessoffice1.jpg","Area de acción","Descripción de oficina","businessoffice1.jpg","Falsa 123",1);
@@ -8348,6 +8348,15 @@ INSERT INTO business_office (tradename,logo,area_of_action,office_description,of
 
 /***************contracts***************/
 INSERT INTO contracts (tradename,tax_name,cif_nif,contact_person,email,domicile,postal_code,business_office_idoffice) VALUES ("Nombre de oficina","Razón social","Q9182039I","Persona de contacto","oficina@oficina.com","Dirección oficina",08901,1);
+INSERT INTO contracts (tradename,tax_name,cif_nif,contact_person,email,domicile,postal_code,business_office_idoffice) VALUES ("Segundo nombre de oficina","Razón social","A64880180","Persona de contacto","oficina2@oficina.com","Dirección oficina",08906,2);
+INSERT INTO contracts (tradename,tax_name,cif_nif,contact_person,email,domicile,postal_code,business_office_idoffice) VALUES ("Tercer nombre de oficina","Razón social","G89595714","Persona de contacto","oficina3@oficina.com","Dirección oficina",08905,3);
+INSERT INTO contracts (tradename,tax_name,cif_nif,contact_person,email,domicile,postal_code,business_office_idoffice) VALUES ("Cuarto nombre de oficina","Razón social","B01732841","Persona de contacto","oficina4@oficina.com","Dirección oficina",08904,4);
+
+/***************offices_images***************/
+INSERT INTO offices_images (name,offices_idoffices) VALUES ("office1.jpg",1);
+INSERT INTO offices_images (name,offices_idoffices) VALUES ("office2.jpg",2);
+INSERT INTO offices_images (name,offices_idoffices) VALUES ("office3.jpg",3);
+INSERT INTO offices_images (name,offices_idoffices) VALUES ("office4.jpg",4);
 
 /***************UPDATES***************/
 /***************update idoffice search on users table***************/
