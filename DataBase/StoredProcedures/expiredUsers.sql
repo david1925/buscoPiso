@@ -1,5 +1,6 @@
 CREATE PROCEDURE `expiredUsers` ()
 BEGIN
-	SELECT * FROM users
-    WHERE users.users_id_user!=1
+	UPDATE users 
+	SET users.last_login= current_timestamp()
+	WHERE users.users_id_user=2;
 END
