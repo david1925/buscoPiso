@@ -1,0 +1,63 @@
+x tipos de pagos:
+
+El pago estará relacionado con una oficina y los clientes que pueden ver se reparten entre todos los comerciales
+
+El pago tiene que estar relacionado con un udsuario (Si alguiien que es autónomo quiere contratar el servicio tiene que poder hacerlo)
+
+En el caso de que sea un autónomo las diferencias serán: En vez de CIF - NIF/NIE
+
+Caracteríticas de cada pago:
+
+La cantidad de usuarios que pueden ver
+
+Para pago básico -->  15 clientes por día. Estos clientes llevarán registrados como mínimo un mes en la web.
+
+Para pago medio --> 25 clientes al día. Llevarán como mínimo 15 días dentro de la web
+
+Pago alto --> Clientes ilimitados. Todos los usuarios
+
+Métodos de pago --> Transferencia, tarjeta, paypal
+
+
+Facturas
+-------------------------------------------------------------------------
+
+Solo el administrador puede ver las facturas.
+
+Las facturas constarán de los siguientes campos:
+
+Id de factura
+
+Fecha
+
+Tipo de pago (tarjeta, transferencia, paypal)
+
+Contacto de facturación (Cuenta de la oficina)
+
+Tipo de suscripción (tipo de premium)
+
+Precio
+
+Fecha de caducidad
+
+Fecha de inicio
+
+IVA (21%)
+
+
+Tipos de usuario
+
+Administrador
+
+Registrado
+
+Administrador de la oficina
+
+Comercial
+
+Oficina
+
+Cuando una oficina hace el pago tiene que poder crear un administrador para esa oficina, el administrado de esa oficina tendrá quep oder gestionar los comerciales que tenga relacionados. Sin tener en cuenta el tipo de pago siempre
+tendrán una cantidad de comerciales ilimitada para dar de alta en una oficina.
+
+

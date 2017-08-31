@@ -1,0 +1,13 @@
+Activar programador de tareas de MySQL
+
+Ejecutar la siguiente consulta dentro de un cliente de MySQL: 
+
+SET GLOBAL event_scheduler = ON;
+
+
+Comprobar que el programador de tareas está activado:
+
+SHOW variables like 'event_scheduler';
+
+
+En el caso de que el resultado de esa consulta sea ON significa que el programdor de tareas está activado.
