@@ -8360,7 +8360,7 @@ INSERT INTO offices_images (name,offices_idoffices) VALUES ("office4.jpg",4);
 
 /***************UPDATES***************/
 /***************update idoffice search on users table***************/
-UPDATE users
+/*UPDATE users
 SET users.offices_search_users_idoffices=1
 WHERE users.users_id_user=1;
 
@@ -8374,4 +8374,4 @@ WHERE users.users_id_user=3;
 
 UPDATE users
 SET users.offices_search_users_idoffices=4
-WHERE users.users_id_user=4;
+WHERE users.users_id_user=4;*/
