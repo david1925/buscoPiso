@@ -8408,6 +8408,54 @@ INSERT INTO locals_warehouses_features (air_conditioner,heating,corner,smoke_out
 INSERT INTO locals_warehouses_features (air_conditioner,heating,corner,smoke_outlet) VALUES (false,true,false,true);
 INSERT INTO locals_warehouses_features (air_conditioner,heating,corner,smoke_outlet) VALUES (false,false,false,false);
 
+/***************locals_warehouses***************/
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (2625,831,date(now()),1,1,1,1,1);
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (654,47,date(now()),1,2,2,1,1);
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (45645,8871,date(now()),1,1,2,1,2);
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (23545,89,date(now()),1,2,1,2,1);
+
+/***************lands***************/
+INSERT INTO lands (price,square_meters,land_type_idland_type,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (34531,165,1,1,1,1);
+
+/***************lands_images***************/
+INSERT INTO lands_images (name,lands_idlands,idlands_images) VALUES ('Casa1',1,1);
+
+/***************locals_warehouses_users***************/
+INSERT INTO locals_warehouses_users (locals_warehouses_idlocals_warehouses,users_users_id_user) VALUES (1,1);
+INSERT INTO locals_warehouses_users (locals_warehouses_idlocals_warehouses,users_users_id_user) VALUES (1,2);
+INSERT INTO locals_warehouses_users (locals_warehouses_idlocals_warehouses,users_users_id_user) VALUES (2,1);
+INSERT INTO locals_warehouses_users (locals_warehouses_idlocals_warehouses,users_users_id_user) VALUES (2,2);
+
+/***************payment_type***************/
+INSERT INTO payment_type (name,number_of_users) VALUES ('Paypal', 5);
+INSERT INTO payment_type (name,number_of_users) VALUES ('CreditCard', 1);
+INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno', 2);
+INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno2', 3);
+
+/***************land_type***************/
+INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,true,true);
+INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,false,true);
+INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,true,false);
+INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,false,false);
+
+/***************lands_users***************/
+INSERT INTO lands_users (lands_idlands,users_users_id_user) VALUES (1,1);
+
+/***************garages_features***************/
+INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (true,true,true);
+INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (false,true,false);
+INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (true,false,true);
+INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (false,false,false);
+
+/***************offices_users***************/
+INSERT INTO offices_users (users_users_id_user,offices_idoffices) VALUES (1,1);
+INSERT INTO offices_users (users_users_id_user,offices_idoffices) VALUES (1,2);
+INSERT INTO offices_users (users_users_id_user,offices_idoffices) VALUES (2,1);
+INSERT INTO offices_users (users_users_id_user,offices_idoffices) VALUES (2,2);
+
+/***************garages_users***************/
+INSERT INTO garages_users (garages_idgarages,users_users_id_user) VALUES (1,1);
+
 
 
 /***************UPDATES***************/
