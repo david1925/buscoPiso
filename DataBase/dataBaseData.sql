@@ -1,3 +1,5 @@
+USE buscoPiso;
+
 /***************groups***************/
 INSERT INTO groups (groups_name) VALUES ("Admin");
 INSERT INTO groups (groups_name) VALUES ("Registered");
@@ -59,15 +61,15 @@ VALUES
 	("Otros");
 
 /***************users***************/
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("David","García","Gómez","david.gargom.94@gmail.com",679614436,"",1,1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortivas@gmail.com",687727135,"",1,1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Oriol","Gual","Rovirosa","fcbgual@gmail.com",675647374,"",1,1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado","ApellidoRegistrado","SegundoApellidoRegistrado","registrado@mailinator.com",111222333,"Busco un piso en la zona de Hospitalet",1,2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado2","ApellidoRegistrado2","SegundoApellidoRegistrado2","registrado2@mailinator.com",333222111,"Busco un piso en la zona de Esplugas",1,2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado3","ApellidoRegistrado3","SegundoApellidoRegistrado3","registrado3@mailinator.com",444555666,"Busco un piso en la zona de Cornellá",1,2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa","ApellidoEmpresa","SegundoApellidoEmpresa","empresa@mailinator.com",666555444,"",1,3);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa2","ApellidoEmpresa2","SegundoApellidoEmpresa2","empresa2@mailinator.com",555444666,"",1,3);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa3","ApellidoEmpresa3","SegundoApellidoEmpresa3","empresa3@mailinator.com",222111333,"",0,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("David","García","Gómez","david.gargom.94@gmail.com",md5('1234'),679614436,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortivas@gmail.com",md5('1234'),687727135,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Oriol","Gual","Rovirosa","fcbgual@gmail.com",md5('1234'),675647374,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado","ApellidoRegistrado","SegundoApellidoRegistrado","registrado@mailinator.com",md5('1234'),111222333,"Busco un piso en la zona de Hospitalet",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado2","ApellidoRegistrado2","SegundoApellidoRegistrado2","registrado2@mailinator.com",md5('1234'),333222111,"Busco un piso en la zona de Esplugas",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado3","ApellidoRegistrado3","SegundoApellidoRegistrado3","registrado3@mailinator.com",md5('1234'),444555666,"Busco un piso en la zona de Cornellá",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa","ApellidoEmpresa","SegundoApellidoEmpresa","empresa@mailinator.com",md5('1234'),666555444,"",1,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa2","ApellidoEmpresa2","SegundoApellidoEmpresa2","empresa2@mailinator.com",md5('1234'),555444666,"",1,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa3","ApellidoEmpresa3","SegundoApellidoEmpresa3","empresa3@mailinator.com",md5('1234'),222111333,"",0,3);
 
 
 /***************autonomous_communities***************/
@@ -8401,10 +8403,10 @@ INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno', 2);
 INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno2', 3);
 
 /***************land_type***************/
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,true,true);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,false,true);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,true,false);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,false,false);
+INSERT INTO land_type (urban,urbanizable) VALUES (true,true);
+INSERT INTO land_type (urban,urbanizable) VALUES (true,false);
+INSERT INTO land_type (urban,urbanizable) VALUES (false,true);
+INSERT INTO land_type (urban,urbanizable) VALUES (false,false);
 
 /***************garages_features***************/
 INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (true,true,true);
@@ -8474,10 +8476,15 @@ INSERT INTO garages_users (garages_idgarages,users_users_id_user) VALUES (2,2);
 
 /***************locals_warehouses_images***************/
 INSERT INTO locals_warehouses_images (name,locals_warehouses_idlocals_warehouses) VALUES ('1.jpg',1);
+INSERT INTO locals_warehouses_images (name,locals_warehouses_idlocals_warehouses) VALUES ('2.jpg',2);
+INSERT INTO locals_warehouses_images (name,locals_warehouses_idlocals_warehouses) VALUES ('3.jpg',1);
+INSERT INTO locals_warehouses_images (name,locals_warehouses_idlocals_warehouses) VALUES ('4.jpg',2);
 
 /***************chats***************/
 INSERT INTO chats (text,text_time,users_users_id_user1,users_users_id_user2) VALUE ('Saludo usu1',date(now()),1,2);
-
+INSERT INTO chats (text,text_time,users_users_id_user1,users_users_id_user2) VALUE ('Saludo usu2',date(now()),2,1);
+INSERT INTO chats (text,text_time,users_users_id_user1,users_users_id_user2) VALUE ('2nd usu1',date(now()),1,2);
+INSERT INTO chats (text,text_time,users_users_id_user1,users_users_id_user2) VALUE ('2nd usu2',date(now()),2,1);
 
 /***************UPDATES***************/
 /***************update idoffice search on users table***************/
