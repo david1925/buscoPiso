@@ -15,6 +15,9 @@ html {
 
 body {
 	font-family: montserrat, arial, verdana;
+	height: 100%; 
+    min-height: 100%;
+    position: relative;
 }
 /*form styles*/
 #msform {
