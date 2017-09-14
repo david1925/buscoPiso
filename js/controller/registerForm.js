@@ -1,7 +1,7 @@
 (function(){
   angular.module("buscoPiso").controller("registerFormController", ['$scope', '$http', '$translate', 'Domain', function($scope, $http, $translate, Domain) {
      
- /* 	 //jQuery time
+  	 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
@@ -77,6 +77,6 @@ $(".previous").click(function(){
     //this comes from the custom easing plugin
     easing: 'easeInOutBack'
   });
-});*/
+});
   }]);
 })();
