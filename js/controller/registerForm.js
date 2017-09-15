@@ -78,5 +78,20 @@ $(".previous").click(function(){
     easing: 'easeInOutBack'
   });
 });
+
+/*Angular code*/
+//Scope variables
+$scope.regularExpressionPhone = "Prueba de variable de angular";
+$scope.passwordValidation = false;
+$scope.password="";
+$scope.repeatPassword="";
+
+
+//Methods
+this.passwordValidation = function () {
+           if($scope.password==$scope.repeatPassword){
+              $scope.passwordValidation=true;
+           }
+    };
   }]);
 })();
