@@ -10,5 +10,6 @@ $app = new \Slim\App;
 //Customer routes
 require '../src/routes/users.php';
 require '../src/routes/municipalities.php';
+require '../src/routes/estates.php';
 
 $app->run();
