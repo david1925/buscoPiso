@@ -85,13 +85,15 @@ $scope.regularExpressionPhone = "Prueba de variable de angular";
 $scope.passwordValidation = false;
 $scope.password="";
 $scope.repeatPassword="";
-
+$scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
 
 //Methods
-this.passwordValidation = function () {
-           if($scope.password==$scope.repeatPassword){
-              $scope.passwordValidation=true;
-           }
+this.selectState = function () {
+    //console.log(Domain + 'api/public/estates/features/');
+    //console.log("Este es el valor de la variable del desplegable: " + $scope.selectedState);
+      $http.get(Domain + 'api/public/estates/features/' + $scope.selectedState).then(function (response) {
+            console.log(response.data);
+        });      
     };
   }]);
 })();
