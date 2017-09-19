@@ -86,6 +86,7 @@ $scope.passwordValidation = false;
 $scope.password="";
 $scope.repeatPassword="";
 $scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
+$scope.autonomousCommunities="";
 
 //Methods
 this.selectState = function () {
@@ -93,7 +94,22 @@ this.selectState = function () {
     //console.log("Este es el valor de la variable del desplegable: " + $scope.selectedState);
       $http.get(Domain + 'api/public/estates/features/' + $scope.selectedState).then(function (response) {
             console.log(response.data);
-        });      
+        });
+
+      $http.get(Domain + 'api/public/autonomousCommunities').then(function (response) {
+            console.log(response.data);
+            $scope.autonomousCommunities = response.data;
+        });
     };
   }]);
+  angular.module('buscoPiso').directive("floorsRegisterFormView", function (){
+    return {
+      restrict: 'E',
+      templateUrl:"floors-register-form-view.html",
+      controller:function(){
+
+      },
+      controllerAs: 'floorsRegisterFormView'
+    };
+  });
 })();
