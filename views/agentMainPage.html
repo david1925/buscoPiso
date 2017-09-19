@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html ng-app="BuscoPisoApp" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BuscoPiso</title>
+    <!-- JQuery -->
+    <script src="../vendors/jquery/jquery-3.1.1.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--Angular-->
+    <script src="../vendors/angular/angular.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--Angular Translate-->
+    <script src="../vendors/angular-translate/angular-translate.js" type="text/javascript" xml:space="preserve"></script>
+    <script src="../vendors/angular-translate/angular-translate.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--Bootstrap-->
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--Angular-Bootstrap-->
+	<script src="../vendors/bootstrap/js/ui-bootstrap-tpls-2.3.1.min.js" type="text/javascript" xml:space="preserve"></script>
+
+	<!-- app -->
+    <script src="../js/app.js" type="text/javascript" xml:space="preserve"></script>    
+
+	<!-- Controller -->
+	<script src="../js/controller/RegisterController.js" type="text/javascript" xml:space="preserve"></script>
+
+    <!-- Model -->
+	<!-- <script src="js/model/User.js" type="text/javascript" xml:space="preserve"></script> -->
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/agentMainPage.css" />
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">BuscoPiso</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Catalan</a></li>
+                                <li><a href="#">Spanish</a></li>
+                                <li><a href="#">English</a></li>
+                            </ul>
+                        </li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="../index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-md-3 line">
+                <figure class="house">
+                    <img src="../images/houses/1.jpg" alt="Los Angeles">
+                    <figcaption>
+                        <div class="row heading">
+                            <div class="col col-sm-1 col-md-offset-1"><input type="checkbox"></div>
+                            <div class="col col-sm-4"><b>900€ / mes</b></div>
+                            <div class="col col-sm-3 col-md-offset-2">Sant Andreu</div>
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="col col-sm-4 col-md-offset-1">Piso - 4 dormitorios</div>
+                                <div class="col col-sm-2">1 baño</div>
+                                <div class="col col-sm-2">95m<sup>2</sup></div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-sm-11 col-md-offset-1">Carrer Doctor Santponç, 137, Cornellà de Llobregat</div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-sm-11 col-md-offset-1">Creado el 22 de Junio de 2017</div>
+                            </div>
+                            <div class="row info">
+                                <div class="col col-sm-5 col-md-offset-1 link"><span>http://www.buscopiso.com/piso/1</span></div>
+                                <div class="col col-sm-3 col-md-offset-3"><a>VER MAS</a></div>
+                            </div>
+                        </div>
+                        <br>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col col-md-3 line">
+                <figure class="house">
+                    <img src="../images/houses/2.jpg" alt="Los Angeles">
+                    <figcaption>
+                        <div class="row heading">
+                            <div class="col col-sm-1 col-md-offset-1"><input type="checkbox"></div>
+                            <div class="col col-sm-4"><b>900€ / mes</b></div>
+                            <div class="col col-sm-3 col-md-offset-2">Sant Andreu</div>
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="col col-sm-4 col-md-offset-1">Piso - 4 dormitorios</div>
+                                <div class="col col-sm-2">1 baño</div>
+                                <div class="col col-sm-2">95m<sup>2</sup></div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-sm-11 col-md-offset-1">Carrer Doctor Santponç, 137, Cornellà de Llobregat</div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-sm-11 col-md-offset-1">Creado el 22 de Junio de 2017</div>
+                            </div>
+                            <div class="row info">
+                                <div class="col col-sm-5 col-md-offset-1 link"><span>http://www.buscopiso.com/piso/2</span></div>
+                                <div class="col col-sm-3 col-md-offset-3"><a>VER MAS</a></div>
+                            </div>
+                        </div>
+                        <br>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col col-md-3 line">
+                <figure class="house">
+                    <img src="../images/houses/3.jpg" alt="Los Angeles">
+                    <figcaption>
+                        <div class="row heading">
+                            <div class="col col-sm-1 col-md-offset-1"><input type="checkbox"></div>
+                            <div class="col col-sm-4"><b>900€ / mes</b></div>
+                            <div class="col col-sm-3 col-md-offset-2">Sant Andreu</div>
+                        </div>
+                        <div class="info">
+                            <div class="row">
+                                <div class="col col-sm-4 col-md-offset-1">Piso - 4 dormitorios</div>
+                                <div class="col col-sm-2">1 baño</div>
+                                <div class="col col-sm-2">95m<sup>2</sup></div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-sm-11 col-md-offset-1">Carrer Doctor Santponç, 137, Cornellà de Llobregat</div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-sm-11 col-md-offset-1">Creado el 22 de Junio de 2017</div>
+                            </div>
+                            <div class="row info">
+                                <div class="col col-sm-5 col-md-offset-1 link"><span>http://www.buscopiso.com/piso/3</span></div>
+                                <div class="col col-sm-3 col-md-offset-3"><a>VER MAS</a></div>
+                            </div>
+                        </div>
+                        <br>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="row">
+                <div class="col col-md-3 line">
+                    <figure class="house">
+                        <img src="../images/houses/4.jpg" alt="Los Angeles">
+                        <figcaption>
+                            <div class="row heading">
+                                <div class="col col-sm-1 col-md-offset-1"><input type="checkbox"></div>
+                                <div class="col col-sm-4"><b>900€ / mes</b></div>
+                                <div class="col col-sm-3 col-md-offset-2">Sant Andreu</div>
+                            </div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col col-sm-4 col-md-offset-1">Piso - 4 dormitorios</div>
+                                    <div class="col col-sm-2">1 baño</div>
+                                    <div class="col col-sm-2">95m<sup>2</sup></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Carrer Doctor Santponç, 137, Cornellà de Llobregat</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Creado el 22 de Junio de 2017</div>
+                                </div>
+                                <div class="row info">
+                                    <div class="col col-sm-5 col-md-offset-1 link"><span>http://www.buscopiso.com/piso/4</span></div>
+                                    <div class="col col-sm-3 col-md-offset-3"><a>VER MAS</a></div>
+                                </div>
+                            </div>
+                            <br>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="col col-md-3 line">
+                    <figure class="house">
+                        <img src="../images/houses/1.jpg" alt="Los Angeles">
+                        <figcaption>
+                            <div class="row heading">
+                                <div class="col col-sm-1 col-md-offset-1"><input type="checkbox"></div>
+                                <div class="col col-sm-4"><b>900€ / mes</b></div>
+                                <div class="col col-sm-3 col-md-offset-2">Sant Andreu</div>
+                            </div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col col-sm-4 col-md-offset-1">Piso - 4 dormitorios</div>
+                                    <div class="col col-sm-2">1 baño</div>
+                                    <div class="col col-sm-2">95m<sup>2</sup></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Carrer Doctor Santponç, 137, Cornellà de Llobregat</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Creado el 22 de Junio de 2017</div>
+                                </div>
+                                <div class="row info">
+                                    <div class="col col-sm-5 col-md-offset-1 link"><span>http://www.buscopiso.com/piso/5</span></div>
+                                    <div class="col col-sm-3 col-md-offset-3"><a>VER MAS</a></div>
+                                </div>
+                            </div>
+                            <br>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="col col-md-3 line">
+                    <figure class="house">
+                        <img src="../images/houses/2.jpg" alt="Los Angeles">
+                        <figcaption>
+                            <div class="row heading">
+                                <div class="col col-sm-1 col-md-offset-1"><input type="checkbox"></div>
+                                <div class="col col-sm-4"><b>900€ / mes</b></div>
+                                <div class="col col-sm-3 col-md-offset-2">Sant Andreu</div>
+                            </div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col col-sm-4 col-md-offset-1">Piso - 4 dormitorios</div>
+                                    <div class="col col-sm-2">1 baño</div>
+                                    <div class="col col-sm-2">95m<sup>2</sup></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Carrer Doctor Santponç, 137, Cornellà de Llobregat</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Creado el 22 de Junio de 2017</div>
+                                </div>
+                                <div class="row info">
+                                    <div class="col col-sm-5 col-md-offset-1 link"><span>http://www.buscopiso.com/piso/6</span></div>
+                                    <div class="col col-sm-3 col-md-offset-3"><a>VER MAS</a></div>
+                                </div>
+                            </div>
+                            <br>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="col col-md-3 line">
+                    <figure class="house">
+                        <img src="../images/houses/2.jpg" alt="Los Angeles">
+                        <figcaption>
+                            <div class="row heading">
+                                <div class="col col-sm-1 col-md-offset-1"><input type="checkbox"></div>
+                                <div class="col col-sm-4"><b>900€ / mes</b></div>
+                                <div class="col col-sm-3 col-md-offset-2">Sant Andreu</div>
+                            </div>
+                            <div class="info">
+                                <div class="row">
+                                    <div class="col col-sm-4 col-md-offset-1">Piso - 4 dormitorios</div>
+                                    <div class="col col-sm-2">1 baño</div>
+                                    <div class="col col-sm-2">95m<sup>2</sup></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Carrer Doctor Santponç, 137, Cornellà de Llobregat</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-11 col-md-offset-1">Creado el 22 de Junio de 2017</div>
+                                </div>
+                                <div class="row info">
+                                    <div class="col col-sm-5 col-md-offset-1 link"><span>http://www.buscopiso.com/piso/6</span></div>
+                                    <div class="col col-sm-3 col-md-offset-3"><a>VER MAS</a></div>
+                                </div>
+                            </div>
+                            <br>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>    
+        </div>   
+    </div>  
+    
+
+    <!-- Footer -->
+    <hr>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; homes4you 2017. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>     
+</body>
+</html>
