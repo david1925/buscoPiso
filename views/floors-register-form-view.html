@@ -3,5 +3,5 @@
 <input type="text" name="lastname" ng-model="lastName" placeholder="Habitaciones"/>
 <select id="selectComunidadAutonoma">
         <option translate="Comunidad autónoma"></option>
-        <option ng-repeat="autonomousCommunity in autonomousCommunities track by $index" translate="{{autonomousCommunity.name}}" value="{{autonomousCommunity}}"></option>
+        <option ng-repeat="autonomousCommunity in arrayAutonomousCommunities track by $index" translate="{{autonomousCommunity.name}}" value="{{autonomousCommunity}}"></option>
       </select>
