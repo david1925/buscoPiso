@@ -86,27 +86,35 @@ $scope.passwordValidation = false;
 $scope.password="";
 $scope.repeatPassword="";
 $scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
+$scope.selectedAutonomousCommunity="";
 $scope.arrayAutonomousCommunities=[];
-$scope.autonomousCommunities= new AutonomousCommunity();
+$scope.selectedAutonomousCommunity="";
 
 //Methods
 this.selectState = function () {
-    //console.log(Domain + 'api/public/estates/features/');
-    //console.log("Este es el valor de la variable del desplegable: " + $scope.selectedState);
       $http.get(Domain + 'api/public/estates/features/' + $scope.selectedState).then(function (response) {
-            //console.log(response.data);
-        });
+
+      });
 
       $http.get(Domain + 'api/public/autonomousCommunities').then(function (response) {
-            //console.log(response.data);
+            console.log(response.data);
             for(var i=0; i<response.data.length; i++){
-              $scope.autonomousCommunities.construct(response.data[i][0],response.data[i][1],response.data[i][2]);
-              console.log(response.data[i][0],response.data[i][1],response.data[i][2]);
+              $scope.autonomousCommunities= new AutonomousCommunity();
+              $scope.autonomousCommunities.construct(response.data[i]["idautonomous_communities"],response.data[i]["name"],response.data[i]["ountries_idcountries"]);
               console.log("Este es el objeto que se crea: " + $scope.autonomousCommunities.getName());
               $scope.arrayAutonomousCommunities.push($scope.autonomousCommunities);
             }
-            //console.log($scope.arrayAutonomousCommunities);
-            //$scope.autonomousCommunities = response.data;
+        });
+    };
+this.selectProvince = function () {
+      $http.get(Domain + 'api/public/autonomousCommunities').then(function (response) {
+            console.log(response.data);
+            for(var i=0; i<response.data.length; i++){
+              $scope.autonomousCommunities= new AutonomousCommunity();
+              $scope.autonomousCommunities.construct(response.data[i]["idautonomous_communities"],response.data[i]["name"],response.data[i]["ountries_idcountries"]);
+              console.log("Este es el objeto que se crea: " + $scope.autonomousCommunities.getName());
+              $scope.arrayAutonomousCommunities.push($scope.autonomousCommunities);
+            }
         });
     };
   }]);

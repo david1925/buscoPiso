@@ -1,7 +1,8 @@
 <input type="text" name="name" ng-model="name" placeholder="Precio"/>
 <input type="text" name="firstname" ng-model="firstName" placeholder="Metros cuadrados"/>
 <input type="text" name="lastname" ng-model="lastName" placeholder="Habitaciones"/>
-<select id="selectComunidadAutonoma">
+<select id="selectComunidadAutonoma" ng-model="selectedAutonomousCommunity">
         <option translate="Comunidad autónoma"></option>
-        <option ng-repeat="autonomousCommunity in arrayAutonomousCommunities track by $index" translate="{{autonomousCommunity.name}}" value="{{autonomousCommunity}}"></option>
+        <option ng-repeat="autonomousCommunity in arrayAutonomousCommunities track by $index" translate="{{autonomousCommunity.getName()}}" value="{{autonomousCommunity.getAutonomousCommunityId()}}"></option>
       </select>
+{{selectedAutonomousCommunity}}

@@ -15,7 +15,7 @@ class AutonomousCommunityDAO {
         $response = array();
         $sql = "SELECT * FROM autonomous_communities";
         $response = $this->dbConnect->selectQuery($sql, $response);
-        return $response->fetchAll();
+        return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
