@@ -151,7 +151,7 @@ body {
 	font-size: 13px;
 }
 
-#selectComunidadAutonoma{
+.selectRegisterForm{
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;

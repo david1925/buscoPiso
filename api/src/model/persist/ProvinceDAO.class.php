@@ -16,14 +16,14 @@ class ProvinceDAO {
         $response = array();
         $sql = "SELECT * FROM provinces";
         $response = $this->dbConnect->selectQuery($sql, $response);
-        return $response->fetchAll();
+        return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getAllFromAutonomousCommunity($id) {
         $response = array($id->getAutonomousCommunityId());
         $sql = "SELECT * FROM provinces WHERE provinces.autonomous_communities_idautonomous_communities = ?";
         $response = $this->dbConnect->selectQuery($sql, $response);
-        return $response->fetchAll();
+        return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 

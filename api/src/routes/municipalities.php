@@ -22,8 +22,9 @@ $app->get('/municipalities/{id}', function(Request $request, Response $response)
   $id = $request->getAttribute("id");
     try{
         $result = "";
+        $municipality = new Municipality("", $id, "", "", "");
         $municipalities = new MunicipalityDAO();
-        $result = $municipalities->getAllFromProvince($id);
+        $result = $municipalities->getAllFromProvince($municipality);
         echo json_encode($result);
     } catch(PDOException $e){
         echo '{"error": {"text": '.$e->getMessage().'}';
