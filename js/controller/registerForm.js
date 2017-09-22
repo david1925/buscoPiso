@@ -86,9 +86,7 @@ $scope.passwordValidation = false;
 $scope.password="";
 $scope.repeatPassword="";
 $scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
-$scope.selectedAutonomousCommunity="";
 $scope.arrayAutonomousCommunities=[];
-$scope.selectedAutonomousCommunity="";
 
 //Methods
 this.selectState = function () {
@@ -97,24 +95,21 @@ this.selectState = function () {
       });
 
       $http.get(Domain + 'api/public/autonomousCommunities').then(function (response) {
-            console.log(response.data);
             for(var i=0; i<response.data.length; i++){
               $scope.autonomousCommunities= new AutonomousCommunity();
-              $scope.autonomousCommunities.construct(response.data[i]["idautonomous_communities"],response.data[i]["name"],response.data[i]["ountries_idcountries"]);
-              console.log("Este es el objeto que se crea: " + $scope.autonomousCommunities.getName());
+              $scope.autonomousCommunities.construct(response.data[i]["idautonomous_communities"],response.data[i]["name"],response.data[i]["countries_idcountries"]);
               $scope.arrayAutonomousCommunities.push($scope.autonomousCommunities);
             }
         });
     };
-this.selectProvince = function () {
-      $http.get(Domain + 'api/public/autonomousCommunities').then(function (response) {
-            console.log(response.data);
-            for(var i=0; i<response.data.length; i++){
-              $scope.autonomousCommunities= new AutonomousCommunity();
-              $scope.autonomousCommunities.construct(response.data[i]["idautonomous_communities"],response.data[i]["name"],response.data[i]["ountries_idcountries"]);
-              console.log("Este es el objeto que se crea: " + $scope.autonomousCommunities.getName());
-              $scope.arrayAutonomousCommunities.push($scope.autonomousCommunities);
-            }
+this.selectProvince = function (selectedAutonomousCommunity) {
+      $http.get(Domain + 'api/public/provinces/' + selectedAutonomousCommunity).then(function (response) {
+              $scope.arrayProvinces=[];
+              for(var i=0; i<response.data.length; i++){
+              $scope.provinces= new Province();
+              $scope.provinces.construct(response.data[i]["idprovinces"],response.data[i]["name"],response.data[i]["idautonomous_communities"]);
+              $scope.arrayProvinces.push($scope.provinces);
+            }            
         });
     };
   }]);

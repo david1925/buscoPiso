@@ -1,6 +1,7 @@
 <?php
 
 require_once "../src/model/Municipality.class.php";
+require_once "../src/model/Province.class.php";
 require_once "../src/model/persist/db.php";
 
 
@@ -15,14 +16,14 @@ class MunicipalityDAO {
         $response = array();
         $sql = "SELECT * FROM municipalities";
         $response = $this->dbConnect->selectQuery($sql, $response);
-        return $response->fetchAll();
+        return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getAllFromProvince($id) {
-        $response = array();
-        $sql = "SELECT * FROM municipalities";
+        $response = array($id->getProvinceId());
+        $sql = "SELECT * FROM municipalities WHERE municipalities.provinces_idprovinces=?";
         $response = $this->dbConnect->selectQuery($sql, $response);
-        return $response->fetchAll();
+        return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 

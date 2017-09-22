@@ -21,6 +21,7 @@
   <script src="../vendors/bootstrap/js/ui-bootstrap-tpls-2.3.1.min.js" type="text/javascript" xml:space="preserve"></script>
   <!--Modelo-->
   <script src="../js/model/AutonomousCommunity.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="../js/model/Province.js" type="text/javascript" xml:space="preserve"></script>
   <!--Controladores-->
   <script src="../js/app.js" type="text/javascript" xml:space="preserve"></script>
   <script src="../js/controller/registerForm.js"></script>
@@ -58,9 +59,6 @@
       </select>
       <div ng-if="selectedState=='Pisos'">
         <floors-register-form-view></floors-register-form-view>
-      </div>
-      <div ng-if="selectedAutonomousCommunity!=''">
-        <province-for-autonomous-community></province-for-autonomous-community>
       </div>
       <span class="avisoCampoObligatorio" translate="Los campos marcados con * son obligatorios"></span>
       <input type="button" name="previous" class="previous action-button" value="Previous" />
