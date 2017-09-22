@@ -1,10 +1,11 @@
 <?php
 
-require_once "../src/model/Municipality.class.php";
+require_once "../src/model/Province.class.php";
+require_once "../src/model/AutonomousCommunity.class.php";
 require_once "../src/model/persist/db.php";
 
 
-class MunicipalityDAO {
+class ProvinceDAO {
     private $dbConnect;
 
     public function __construct() {
@@ -13,14 +14,14 @@ class MunicipalityDAO {
 
     public function getAll() {
         $response = array();
-        $sql = "SELECT * FROM municipalities";
+        $sql = "SELECT * FROM provinces";
         $response = $this->dbConnect->selectQuery($sql, $response);
         return $response->fetchAll();
     }
 
-    public function getAllFromProvince($id) {
-        $response = array();
-        $sql = "SELECT * FROM municipalities";
+    public function getAllFromAutonomousCommunity($id) {
+        $response = array($id->getAutonomousCommunityId());
+        $sql = "SELECT * FROM provinces WHERE provinces.autonomous_communities_idautonomous_communities = ?";
         $response = $this->dbConnect->selectQuery($sql, $response);
         return $response->fetchAll();
     }

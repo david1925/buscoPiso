@@ -12,5 +12,6 @@ require '../src/routes/users.php';
 require '../src/routes/autonomousCommunities.php';
 require '../src/routes/municipalities.php';
 require '../src/routes/estates.php';
+require '../src/routes/provinces.php';
 
 $app->run();
