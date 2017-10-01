@@ -2,12 +2,14 @@
 <input type="text" name="firstname" ng-model="firstName" placeholder="Metros cuadrados"/>
 <input type="text" name="lastname" ng-model="lastName" placeholder="Habitaciones"/>
 <select class="selectRegisterForm" ng-model="selectedAutonomousCommunity" ng-change="registerFormCtrl.selectProvince(selectedAutonomousCommunity)">
-        <option translate="Comunidad autónoma"></option>
+        <option translate="Comunidad autónoma*"></option>
         <option ng-repeat="autonomousCommunity in arrayAutonomousCommunities track by $index" translate="{{autonomousCommunity.getName()}}" value="{{autonomousCommunity.getAutonomousCommunityId()}}"></option>
       </select>
 <select ng-if="selectedAutonomousCommunity!=null" class="selectRegisterForm" ng-model="selectedProvince" ng-change="registerFormCtrl.selectMunicipality(selectedProvince)">
-        <option translate="Província"></option>
+        <option translate="Província*"></option>
         <option ng-repeat="province in arrayProvinces track by $index" translate="{{province.getName()}}" value="{{province.getProvinceId()}}"></option>
       </select>
-      {{selectedAutonomousCommunity}}
-      {{selectedProvince}}
+<select ng-if="selectedProvince!=null" class="selectRegisterForm" ng-model="selectedMunicipality">
+        <option translate="Municipio"></option>
+        <option ng-repeat="municipality in arrayMunicipalities track by $index" translate="{{municipality.getName()}}" value="{{municipality.getMunicipalityId()}}"></option>
+      </select>
