@@ -114,13 +114,12 @@ this.selectProvince = function (selectedAutonomousCommunity) {
         });
     };
 this.selectMunicipality = function (selectedProvince) {
-    console.log(Domain + 'api/public/provinces/' + selectedProvince);
-      $http.get(Domain + 'api/public/provinces/' + selectedProvince).then(function (response) {
-              $scope.arrayProvinces=[];
+      $http.get(Domain + 'api/public/municipalities/' + selectedProvince).then(function (response) {
+              $scope.arrayMunicipalities=[];
               for(var i=0; i<response.data.length; i++){
-              $scope.provinces= new Province();
-              $scope.provinces.construct(response.data[i]["idprovinces"],response.data[i]["name"],response.data[i]["idautonomous_communities"]);
-              $scope.arrayProvinces.push($scope.provinces);
+              $scope.municipalities= new Municipality();
+              $scope.municipalities.construct(response.data[i]["idmunicipalities"],response.data[i]["provinces_idprovinces"],response.data[i]["idautonomous_communities"],response.data[i]["dc"],response.data[i]["name"]);
+              $scope.arrayMunicipalities.push($scope.municipalities);
             }            
         });
     };

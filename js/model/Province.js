@@ -4,7 +4,7 @@ function Province() {
     this.autonomousCommunityId;
 
     this.construct = function (provinceId, name, autonomousCommunityId) {
-        this.setProvinceId(name);
+        this.setProvinceId(provinceId);
         this.setName(name);
         this.setAutonomousCommunityId(autonomousCommunityId);
     }

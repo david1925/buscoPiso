@@ -5,3 +5,4 @@ SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de d
 SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
 SQLSTATE[HY000]: General errorSQLSTATE[HY000]: General errorSQLSTATE[HY000]: General error2017-10-01 00:48:27;;;;;;SQLSTATE[HY000]: General error2017-10-01 00:48:44;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
 2017-10-01 00:48:59;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+2017-10-01 00:54:20;;;;;;SQLSTATE[HY000]: General error
