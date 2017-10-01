@@ -87,6 +87,7 @@ $scope.password="";
 $scope.repeatPassword="";
 $scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
 $scope.arrayAutonomousCommunities=[];
+$scope.selectedProvince="";
 
 //Methods
 this.selectState = function () {
@@ -104,6 +105,17 @@ this.selectState = function () {
     };
 this.selectProvince = function (selectedAutonomousCommunity) {
       $http.get(Domain + 'api/public/provinces/' + selectedAutonomousCommunity).then(function (response) {
+              $scope.arrayProvinces=[];
+              for(var i=0; i<response.data.length; i++){
+              $scope.provinces= new Province();
+              $scope.provinces.construct(response.data[i]["idprovinces"],response.data[i]["name"],response.data[i]["idautonomous_communities"]);
+              $scope.arrayProvinces.push($scope.provinces);
+            }            
+        });
+    };
+this.selectMunicipality = function (selectedProvince) {
+    console.log(Domain + 'api/public/provinces/' + selectedProvince);
+      $http.get(Domain + 'api/public/provinces/' + selectedProvince).then(function (response) {
               $scope.arrayProvinces=[];
               for(var i=0; i<response.data.length; i++){
               $scope.provinces= new Province();

@@ -59,15 +59,15 @@ VALUES
 	("Otros");
 
 /***************users***************/
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("David","García","Gómez","david.gargom.94@gmail.com",679614436,"",1,1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortivas@gmail.com",687727135,"",1,1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Oriol","Gual","Rovirosa","fcbgual@gmail.com",675647374,"",1,1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado","ApellidoRegistrado","SegundoApellidoRegistrado","registrado@mailinator.com",111222333,"Busco un piso en la zona de Hospitalet",1,2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado2","ApellidoRegistrado2","SegundoApellidoRegistrado2","registrado2@mailinator.com",333222111,"Busco un piso en la zona de Esplugas",1,2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado3","ApellidoRegistrado3","SegundoApellidoRegistrado3","registrado3@mailinator.com",444555666,"Busco un piso en la zona de Cornellá",1,2);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa","ApellidoEmpresa","SegundoApellidoEmpresa","empresa@mailinator.com",666555444,"",1,3);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa2","ApellidoEmpresa2","SegundoApellidoEmpresa2","empresa2@mailinator.com",555444666,"",1,3);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa3","ApellidoEmpresa3","SegundoApellidoEmpresa3","empresa3@mailinator.com",222111333,"",0,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("David","García","Gómez","david.gargom.94@gmail.com",md5("david"),679614436,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortivas@gmail.com",md5("pol"),687727135,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Oriol","Gual","Rovirosa","fcbgual@gmail.com",md5("oriol"),675647374,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado","ApellidoRegistrado","SegundoApellidoRegistrado","registrado@mailinator.com",md5("registrado"),111222333,"Busco un piso en la zona de Hospitalet",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado2","ApellidoRegistrado2","SegundoApellidoRegistrado2","registrado2@mailinator.com",md5("registrado2"),333222111,"Busco un piso en la zona de Esplugas",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado3","ApellidoRegistrado3","SegundoApellidoRegistrado3","registrado3@mailinator.com",md5("registrado3"),444555666,"Busco un piso en la zona de Cornellá",1,2);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa","ApellidoEmpresa","SegundoApellidoEmpresa","empresa@mailinator.com",md5("empresa"),666555444,"",1,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa2","ApellidoEmpresa2","SegundoApellidoEmpresa2","empresa2@mailinator.com",md5("empresa2"),555444666,"",1,3);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Empresa3","ApellidoEmpresa3","SegundoApellidoEmpresa3","empresa3@mailinator.com",md5("empresa3"),222111333,"",0,3);
 
 
 /***************autonomous_communities***************/
