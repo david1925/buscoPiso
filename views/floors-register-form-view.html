@@ -9,7 +9,7 @@
         <option translate="Província*"></option>
         <option ng-repeat="province in arrayProvinces track by $index" translate="{{province.getName()}}" value="{{province.getProvinceId()}}"></option>
       </select>
-<select ng-if="selectedProvince!=null" class="selectRegisterForm" ng-model="selectedMunicipality">
+<select ng-if="selectedProvince!=''" class="selectRegisterForm" ng-model="selectedMunicipality">
         <option translate="Municipio"></option>
         <option ng-repeat="municipality in arrayMunicipalities track by $index" translate="{{municipality.getName()}}" value="{{municipality.getMunicipalityId()}}"></option>
       </select>

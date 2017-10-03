@@ -88,6 +88,7 @@ $scope.repeatPassword="";
 $scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
 $scope.arrayAutonomousCommunities=[];
 $scope.selectedProvince="";
+$scope.additionalFeatures = new AdditionalFeatures();
 
 //Methods
 this.selectState = function () {
@@ -100,7 +101,7 @@ this.selectState = function () {
               $scope.autonomousCommunities= new AutonomousCommunity();
               $scope.autonomousCommunities.construct(response.data[i]["idautonomous_communities"],response.data[i]["name"],response.data[i]["countries_idcountries"]);
               $scope.arrayAutonomousCommunities.push($scope.autonomousCommunities);
-            }
+            }            
         });
     };
 this.selectProvince = function (selectedAutonomousCommunity) {
@@ -120,8 +121,14 @@ this.selectMunicipality = function (selectedProvince) {
               $scope.municipalities= new Municipality();
               $scope.municipalities.construct(response.data[i]["idmunicipalities"],response.data[i]["provinces_idprovinces"],response.data[i]["idautonomous_communities"],response.data[i]["dc"],response.data[i]["name"]);
               $scope.arrayMunicipalities.push($scope.municipalities);
-            }            
+            }
+            $scope.selectedProvince = selectedProvince;
         });
+    };
+this.getAdditionalFeatures = function () {
+
+      $scope.additionalFeatures = new AdditionalFeatures();
+
     };
   }]);
   angular.module('buscoPiso').directive("floorsRegisterFormView", function (){
