@@ -14,5 +14,6 @@ require '../src/routes/municipalities.php';
 require '../src/routes/estates.php';
 require '../src/routes/provinces.php';
 require '../src/routes/errors.php';
+require '../src/routes/additionalFeatures.php';
 
 $app->run();
