@@ -13,18 +13,18 @@ function AdditionalFeatures() {
         this.floorId;
 
     this.construct = function (additionalFeaturesId, airConditioner, builtInWardrobe, elevator, exterior, parking, garden, pool, storageRoom, communityZone, gym, floorId) {
-        this.additionalFeaturesId(additionalFeaturesId);
-        this.airConditioner(airConditioner);
-        this.builtInWardrobe(builtInWardrobe);
-        this.elevator(elevator);
-        this.exterior(exterior);
-        this.parking(parking);
-        this.garden(garden);
-        this.pool(pool);
-        this.storageRoom(storageRoom);
-        this.communityZone(communityZone);
-        this.gym(gym);
-        this.floorId(floorId);
+        this.setAdditionalFeaturesId(additionalFeaturesId);
+        this.setAirConditioner(airConditioner);
+        this.setBuiltInWardrobe(builtInWardrobe);
+        this.setElevator(elevator);
+        this.setExterior(exterior);
+        this.setParking(parking);
+        this.setGarden(garden);
+        this.setPool(pool);
+        this.setStorageRoom(storageRoom);
+        this.setCommunityZone(communityZone);
+        this.setGym(gym);
+        this.setFloorId(floorId);
     }
 
     this.getAdditionalFeaturesId = function () {return this.additionalFeaturesId;}

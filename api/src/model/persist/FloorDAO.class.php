@@ -18,7 +18,7 @@ class FloorDAO {
           $response = array();
           $sql = "SELECT * FROM $estate";
           $response = $this->dbConnect->selectQuery($sql, $response);
-          return $response->fetchAll();
+          return $response->fetchAll(PDO::FETCH_ASSOC);
         }catch(PDOException $pe){
           try{
               $error = new ErrorLog("","",$pe->getMessage());
