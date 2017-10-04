@@ -25,18 +25,23 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-footer {
-   padding: 50px 0;
-   background-color: #f8f8f8;
-   border-top: 1px solid #e7e7e7;
-}
-
 .topnav {
     font-size: 14px; 
 }
 
+#header {
+    margin-bottom: 75px;
+}
+
+footer {
+   padding: 25px 0;
+   background-color: #f8f8f8;
+   border-top: 1px solid #e7e7e7;
+}
+
 .banner {
-    padding: 100px 0;
+    padding: 50px 0;
+    margin: 50px 0px 100px 0px;
     color: #f8f8f8;
     background: url(../images/banner/banner.jpg) no-repeat center center;
     background-size: cover;
