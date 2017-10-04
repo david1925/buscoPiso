@@ -63,6 +63,12 @@
       <div ng-if="selectedState=='Pisos'">
         <floors-register-form-view></floors-register-form-view>
       </div>
+      <div ng-if="selectedState=='Oficinas'">
+        <offices-register-form-view></offices-register-form-view>
+      </div>
+      <div ng-if="selectedState!=''">
+        <location-register-form-view></location-register-form-view>
+      </div>
       <span class="avisoCampoObligatorio" translate="Los campos marcados con * son obligatorios"></span>
       <input type="button" name="previous" class="previous action-button" value="Previous" />
       <input type="button" name="next" class="next action-button" value="Next" />      

@@ -87,11 +87,19 @@ $scope.password="";
 $scope.repeatPassword="";
 $scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
 $scope.arrayAutonomousCommunities=[];
+$scope.arrayAdditionalFeatures=[];
+$scope.selectedState="";
 $scope.selectedProvince="";
 $scope.additionalFeatures = new AdditionalFeatures();
 
 //Methods
 this.selectState = function () {
+
+      switch($scope.selectedState){
+        case "Pisos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Armario empotrado", "Ascensor", "Exterior", "Parking", "Jardín", "Piscina", "Terraza", "Trastero", "Zona comunitaria", "Trastero"];        
+        break;
+      }
+
       $http.get(Domain + 'api/public/estates/features/' + $scope.selectedState).then(function (response) {
 
       });
@@ -101,7 +109,7 @@ this.selectState = function () {
               $scope.autonomousCommunities= new AutonomousCommunity();
               $scope.autonomousCommunities.construct(response.data[i]["idautonomous_communities"],response.data[i]["name"],response.data[i]["countries_idcountries"]);
               $scope.arrayAutonomousCommunities.push($scope.autonomousCommunities);
-            }            
+            }
         });
     };
 this.selectProvince = function (selectedAutonomousCommunity) {
@@ -125,12 +133,18 @@ this.selectMunicipality = function (selectedProvince) {
             $scope.selectedProvince = selectedProvince;
         });
     };
-this.getAdditionalFeatures = function () {
-
-      $scope.additionalFeatures = new AdditionalFeatures();
-
-    };
   }]);
+  angular.module('buscoPiso').directive("locationRegisterFormView", function (){
+    return {
+      restrict: 'E',
+      templateUrl:"location-register-form-view.html",
+      controller:function(){
+
+      },
+      controllerAs: 'locationRegisterFormView'
+    };
+  });
+
   angular.module('buscoPiso').directive("floorsRegisterFormView", function (){
     return {
       restrict: 'E',
@@ -139,6 +153,17 @@ this.getAdditionalFeatures = function () {
 
       },
       controllerAs: 'floorsRegisterFormView'
+    };
+  });
+
+  angular.module('buscoPiso').directive("officesRegisterFormView", function (){
+    return {
+      restrict: 'E',
+      templateUrl:"offices-register-form-view.html",
+      controller:function(){
+
+      },
+      controllerAs: 'officesRegisterFormView'
     };
   });
 })();
