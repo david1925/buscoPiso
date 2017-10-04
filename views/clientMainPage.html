@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html ng-app="buscoPiso" lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BuscoPiso</title>
+    <!--JQUERY-->
+    <script src="../vendors/jquery/jquery-3.1.1.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--ANGULAR-->
+    <script src="../vendors/angular/angular.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--BOOTSTRAP-->
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--ANGULAR BOOTSTRAP-->
+    <script src="../vendors/bootstrap/js/ui-bootstrap-tpls-2.3.1.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--ANGULAR PAGINATION-->
+    <script src="../vendors/angular/dirPagination.js" type="text/javascript" xml:space="preserve"></script>
+    <!--ANGULAR TRANSLATE-->
+    <script src="../vendors/angular-translate/angular-translate.js" type="text/javascript" xml:space="preserve"></script>
+    <script src="../vendors/angular-translate/angular-translate.min.js" type="text/javascript" xml:space="preserve"></script>
+
+    <!-- APP -->    
+    <script src="../js/app.js" type="text/javascript" xml:space="preserve"></script>
+    <!-- CONTROLLER -->
+    <script src="../js/controller/loginForm.js" type="text/javascript" xml:space="preserve"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/clientMainPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <!-- MONTSERRAT FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">   
+</head>
+<body>
+    <div id="header" ng-include="'headerAndFooter.html'"></div>
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#datosPersonales">DATOS PERSONALES</a></li>
+            <li><a data-toggle="tab" href="#preferenciasBusqueda">PREFERENCIAS DE BÚSQUEDA</a></li>
+            <li><a data-toggle="tab" href="#caracteristicasAdicionales">CARACTERÍSTICAS ADICIONALES</a></li>
+        </ul>            
+        <div class="tab-content">
+            <div id="datosPersonales" class="tab-pane fade in active">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <h3>DATOS PERSONALES</h3>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Primer apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Segundo apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Repetir contraseña">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="preferenciasBusqueda" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3>PREFERENCIAS DE BÚSQUEDA</h3>
+                        <br>
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label for="sel1">Tipo de inmueble:</label>
+                                <select class="form-control" id="sel1">
+                                    <option>Pisos</option>
+                                    <option>Oficinas</option>
+                                    <option>Garages</option>
+                                    <option>Trasteros</option>
+                                    <option>Terrenos</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="caracteristicasAdicionales" class="tab-pane fade">
+                <h3>CARACTERÍSTICAS ADICIONALES</h3>
+                <br>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#favoritos">FAVORITOS</a></li>
+            <li><a data-toggle="tab" href="#contactos">CONTACTOS</a></li>
+            <li><a data-toggle="tab" href="#mensajesSistema">MENSAJES DEL SISTEMA</a></li>
+            <li><a id="chats" type="button" class="btn btn-primary">CHATS</a></li>
+            
+        </ul>            
+        <div class="tab-content">
+            <div id="favoritos" class="tab-pane fade in active">
+                <h3>FAVORITOS</h3>
+                <br>
+                <div class="message">
+                    La empresa X se ha puesto en contacto contigo
+                    <br>
+                    <span class="glyphicon glyphicon-remove pull-right"></span>	
+                    <br>
+                    <span class="glyphicon glyphicon-time"></span>	
+                    10:12&nbsp 
+                    <span class="glyphicon glyphicon-calendar"></span>	
+                    02/10/2017&nbsp&nbsp
+                </div>
+                <nav aria-label="...">
+                    <ul class="pagination pagination-xs">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="contactos" class="tab-pane fade">
+                <h3>CONTACTOS</h3>
+                <br>
+                <div class="message">
+                    La empresa X se ha puesto en contacto contigo
+                    <br>
+                    <span class="glyphicon glyphicon-remove pull-right"></span>	
+                    <br>
+                    <span class="glyphicon glyphicon-time"></span>	
+                    10:12&nbsp 
+                    <span class="glyphicon glyphicon-calendar"></span>	
+                    02/10/2017&nbsp&nbsp
+                </div>
+                <div class="message">
+                    La empresa X se ha puesto en contacto contigo
+                    <br>
+                    <span class="glyphicon glyphicon-remove pull-right"></span>	
+                    <br>
+                    <span class="glyphicon glyphicon-time"></span>	
+                    10:12&nbsp 
+                    <span class="glyphicon glyphicon-calendar"></span>	
+                    02/10/2017&nbsp&nbsp
+                </div>
+                <nav aria-label="...">
+                    <ul class="pagination pagination-xs">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="mensajesSistema" class="tab-pane fade">
+                <h3>MENSAJES DEL SISTEMA</h3>
+                <br>
+                <div class="message">
+                    Saludos. Realizaremos mantenimiento del servidor el dia 04/10/2017. Gracias.
+                    <br>
+                    <span class="glyphicon glyphicon-remove pull-right"></span>	
+                    <br>
+                    <span class="glyphicon glyphicon-time"></span>	
+                    10:12&nbsp 
+                    <span class="glyphicon glyphicon-calendar"></span>	
+                    02/10/2017&nbsp&nbsp
+                </div>
+                <div class="message">
+                    Saludos. Realizaremos mantenimiento del servidor el dia 04/10/2017. Gracias.
+                    <br>
+                    <span class="glyphicon glyphicon-remove pull-right"></span>	
+                    <br>
+                    <span class="glyphicon glyphicon-time"></span>	
+                    10:12&nbsp 
+                    <span class="glyphicon glyphicon-calendar"></span>	
+                    02/10/2017&nbsp&nbsp
+                </div>
+                <div class="message">
+                    Saludos. Realizaremos mantenimiento del servidor el dia 04/10/2017. Gracias.
+                    <br>
+                    <span class="glyphicon glyphicon-remove pull-right"></span>	
+                    <br>
+                    <span class="glyphicon glyphicon-time"></span>	
+                    10:12&nbsp 
+                    <span class="glyphicon glyphicon-calendar"></span>	
+                    02/10/2017&nbsp&nbsp
+                </div>
+                <nav aria-label="...">
+                    <ul class="pagination pagination-xs">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+	<div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Connect to BuscoPiso:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        <li><a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a></li>
+                        <li><a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a></li>
+                        <li><a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
