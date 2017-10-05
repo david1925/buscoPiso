@@ -88,6 +88,7 @@ $scope.repeatPassword="";
 $scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
 $scope.arrayAutonomousCommunities=[];
 $scope.arrayAdditionalFeatures=[];
+$scope.arrayTypeOfContract=[];
 $scope.selectedState="";
 $scope.selectedProvince="";
 $scope.additionalFeatures = new AdditionalFeatures();
@@ -96,13 +97,29 @@ $scope.additionalFeatures = new AdditionalFeatures();
 this.selectState = function () {
 
       switch($scope.selectedState){
-        case "Pisos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Armario empotrado", "Ascensor", "Exterior", "Parking", "Jardín", "Piscina", "Terraza", "Trastero", "Zona comunitaria", "Trastero"];        
+        case "Pisos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Armario empotrado", "Ascensor", "Exterior", "Parking", "Jardín", "Piscina", "Terraza", "Trastero", "Zona comunitaria", "Trastero"]; 
+        break;
+        case "Oficinas": $scope.arrayAdditionalFeatures=["Agua caliente", "Aire acondicionado", "Ascensor", "Calefacción", "Exterior", "Parking", "Seguridad"];
+        break;
+        case "Garages": $scope.arrayAdditionalFeatures=["Plaza de moto", "Puerta automática", "Seguridad"];
+        break;
+        case "Trasteros": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"];
+        break;
+        case "Terrenos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"];
         break;
       }
 
       $http.get(Domain + 'api/public/estates/features/' + $scope.selectedState).then(function (response) {
 
       });
+
+      $http.get(Domain + 'api/public/typeOfContract').then(function (response) {
+            for(var i=0; i<response.data.length; i++){
+              $scope.typeOfContract= new TypeOfContract();
+              $scope.typeOfContract.construct(response.data[i]["idtype_of_contract"],response.data[i]["name"]);
+              $scope.arrayTypeOfContract.push($scope.typeOfContract);
+            }
+        });
 
       $http.get(Domain + 'api/public/autonomousCommunities').then(function (response) {
             for(var i=0; i<response.data.length; i++){
@@ -164,6 +181,17 @@ this.selectMunicipality = function (selectedProvince) {
 
       },
       controllerAs: 'officesRegisterFormView'
+    };
+  });
+
+  angular.module('buscoPiso').directive("additionalFeaturesRegisterFormView", function (){
+    return {
+      restrict: 'E',
+      templateUrl:"additional-features-register-form-view.html",
+      controller:function(){
+
+      },
+      controllerAs: 'additionalFeaturesRegisterFormView'
     };
   });
 })();

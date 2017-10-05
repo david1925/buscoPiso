@@ -15,5 +15,6 @@ require '../src/routes/estates.php';
 require '../src/routes/provinces.php';
 require '../src/routes/errors.php';
 require '../src/routes/additionalFeatures.php';
+require '../src/routes/typeOfContract.php';
 
 $app->run();
