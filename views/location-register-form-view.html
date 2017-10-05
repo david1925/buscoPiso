@@ -1,3 +1,7 @@
+<select id="selectContrato" class="selectRegisterForm" ng-model="selectedTypeOfContract">
+        <option translate="Tipo de contrato"></option>
+        <option ng-repeat="typeOfContract in arrayTypeOfContract track by $index" translate="{{typeOfContract.getName()}}" value="{{typeOfContract.getTypeOfContractId()}}"></option>
+      </select>
 <select class="selectRegisterForm" ng-model="selectedAutonomousCommunity" ng-change="registerFormCtrl.selectProvince(selectedAutonomousCommunity)">
         <option translate="Comunidad autónoma*"></option>
         <option ng-repeat="autonomousCommunity in arrayAutonomousCommunities track by $index" translate="{{autonomousCommunity.getName()}}" value="{{autonomousCommunity.getAutonomousCommunityId()}}"></option>
