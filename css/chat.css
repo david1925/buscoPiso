@@ -1,0 +1,35 @@
+.boxes {
+    border: 1px solid #e9e9e9;
+    height: 90vh;
+    margin-top: 50px;
+}
+
+.chats {
+    max-width: 50%;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4);
+	padding: 15px 25px;
+	box-sizing: border-box;
+	margin: 1% 10%;
+    position: relative;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+img {
+    min-width: 70px;
+    max-width: 25%;
+    border-radius: 500px;
+}
+
+.userData {
+    vertical-align: middle !important;
+}
