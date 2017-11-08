@@ -1,4 +1,4 @@
-function OfficesUsers() {    
+function Users() {    
     this.userId;
     this.name;
     this.firstname;
@@ -13,8 +13,8 @@ function OfficesUsers() {
     this.businessOfficeId;
     this.additionalFeaturesId;
 
-    this.construct = function (typeOfBuildingId, name) {
-        this.setTypeOfBuildingId(typeOfBuildingId);
+    this.construct = function (userId, name, firstname, lastLogin, email, password, phone, description, state, lastLogin, groupId, businessOfficeId, additionalFeaturesId) {
+        this.setUserId(userId);
         this.setName(name);
         this.setFirstname(firstname);
         this.setLastname(lastname);

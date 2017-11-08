@@ -17,3 +17,25 @@ $app->get('/users', function(Request $request, Response $response){
         echo '{"error": {"text": '.$e->getMessage().'}';
     }
 });
+
+// Check if session started, if not start session
+$app->post('/users/login/', function(Request $request, Response $response){
+    $username = $request->getParam("email");
+    $password = $request->getParam("password");
+    try{
+        $result = "";
+        $user = new Users("", "", "", "", $email, $password, "", "", "", "", "", "", "", "", "");
+        $helper = new UsersDAO();
+        $result = $helper->checkLogin($user);
+        if($result==null){
+        	echo '{"error": {"text": "Username or password incorrect"}}';
+        }else{
+            session_start();
+        	$_SESSION['user']=$result;
+        	echo json_encode($result);
+        }        
+    } catch(PDOException $e){
+        echo '{"error": {"text": '.$e->getMessage().'}}';
+    }
+});
+

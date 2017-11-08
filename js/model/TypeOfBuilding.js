@@ -1,4 +1,4 @@
-function OfficesUsers() {
+function TypeOfBuilding() {
     this.typeOfBuildingId;
     this.name;
 

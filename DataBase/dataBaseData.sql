@@ -8401,10 +8401,10 @@ INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno', 2);
 INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno2', 3);
 
 /***************land_type***************/
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,true,true);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,false,true);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,true,false);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,false,false);
+INSERT INTO land_type (urban,urbanizable) VALUES (true,true);
+INSERT INTO land_type (urban,urbanizable) VALUES (true,false);
+INSERT INTO land_type (urban,urbanizable) VALUES (false,true);
+INSERT INTO land_type (urban,urbanizable) VALUES (false,false);
 
 /***************garages_features***************/
 INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (true,true,true);

@@ -31,7 +31,6 @@
             $this->groupId = $groupId;
             $this->businessOfficeId = $businessOfficeId;
             $this->additionalFeaturesId = $additionalFeaturesId;
-
         }
 
         //GETTERS
