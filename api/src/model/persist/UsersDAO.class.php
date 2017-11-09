@@ -41,9 +41,9 @@ class UsersDAO {
                        users_password, users_phone, floor_description, state, last_login, groups_groups_id_group,
                        business_office_idoffice, additional_features_users_idadditional_features_users 
                 FROM users 
-                WHERE users_email        = ? 
-                  AND users_password     = md5(?)
-                  AND state = 1";
+                WHERE users_email    = ? 
+                  AND users_password = md5(?)
+                  AND state          = 1";
         $response = $this->dbConnect->selectQuery($sql, $response);
         return $response->fetchAll();
     }

@@ -13,7 +13,7 @@ function Users() {
     this.businessOfficeId;
     this.additionalFeaturesId;
 
-    this.construct = function (userId, name, firstname, lastLogin, email, password, phone, description, state, lastLogin, groupId, businessOfficeId, additionalFeaturesId) {
+    this.construct = function (userId, name, firstname, lastname, email, password, phone, description, state, lastLogin, groupId, businessOfficeId, additionalFeaturesId) {
         this.setUserId(userId);
         this.setName(name);
         this.setFirstname(firstname);
@@ -25,35 +25,35 @@ function Users() {
         this.setState(state);
         this.setLastLogin(lastLogin);
         this.setGroupId(groupId);
-        this.setBusinnessOfficeId(businessOfficeId);
+        this.setBusinessOfficeId(businessOfficeId);
         this.setAdditionalFeaturesId(additionalFeaturesId);
     }
-    
-    function getUserId() {return this.userId;}
-    function getName() {return this.name;}
-    function getFirstname() {return this.firstname;}
-    function getLastname() {return this.lastname;}
-    function getEmail() {return this.email;}
-    function getPassword() {return this.password;}
-    function getPhone() {return this.phone;}
-    function getDescription() {return this.description;}
-    function getState() {return this.state;}
-    function getLastLogin() {return this.lastLogin;}
-    function getGroupId() {return this.groupId;}
-    function getBusinnessOfficeId() {return this.businessOfficeId;}
-    function getAdditionalFeaturesId() {return this.additionalFeaturesId;}
 
-    function setUserId(userId) {this.userId=userId;}
-    function setName(name) {this.name=name;}
-    function setFirstname(firstname) {this.firstname=firstname;}
-    function setLastname(lastname) {this.lastname=lastname;}
-    function setEmail(email) {this.email=email;}
-    function setPassword(password) {this.password=password;}
-    function setPhone(phone) {this.phone=phone;}
-    function setDescription(description) {this.description=description;}
-    function setState(state) {this.state=state;}
-    function setLastLogin(lastLogin) {this.lastLogin=lastLogin;}
-    function setGroupId(groupId) {this.groupId=groupId;}
-    function setBusinnessOfficeId(businessOfficeId) {this.getBusinnessOfficeId=$businessOfficeId;}
-    function setAdditionalFeaturesId(additionalFeaturesId) {this.additionalFeaturesId=$additionalFeaturesId;}
+    this.setUserId = function(userId) {this.userId=userId;}
+    this.setName = function(name) {this.name=name;}
+    this.setFirstname = function(firstname) {this.firstname=firstname;}
+    this.setLastname = function(lastname) {this.lastname=lastname;}
+    this.setEmail = function(email) {this.email=email;}
+    this.setPassword = function(password) {this.password=password;}
+    this.setPhone = function(phone) {this.phone=phone;}
+    this.setDescription = function(description) {this.description=description;}
+    this.setState = function(state) {this.state=state;}
+    this.setLastLogin = function(lastLogin) {this.lastLogin=lastLogin;}
+    this.setGroupId = function(groupId) {this.groupId=groupId;}
+    this.setBusinessOfficeId = function(businessOfficeId) {this.getBusinnessOfficeId=businessOfficeId;}
+    this.setAdditionalFeaturesId = function(additionalFeaturesId) {this.additionalFeaturesId=additionalFeaturesId;}
+    
+    this.getUserId = function() {return this.userId;}
+    this.getName = function() {return this.name;}
+    this.getFirstname = function() {return this.firstname;}
+    this.getLastname = function() {return this.lastname;}
+    this.getEmail = function() {return this.email;}
+    this.getPassword = function() {return this.password;}
+    this.getPhone = function() {return this.phone;}
+    this.getDescription = function() {return this.description;}
+    this.getState = function() {return this.state;}
+    this.getLastLogin = function() {return this.lastLogin;}
+    this.getGroupId = function() {return this.groupId;}
+    this.getBusinessOfficeId = function() {return this.businessOfficeId;}
+    this.getAdditionalFeaturesId = function() {return this.additionalFeaturesId;}
 }
