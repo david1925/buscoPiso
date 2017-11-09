@@ -6,7 +6,6 @@
     this.login = function () {
       $scope.flag;
       $http.post(Domain + 'api/public/users/login/', {"email" : $scope.email, "password" : $scope.password}).then(function (response) {
-        console.log(response.data, $scope.email, $scope.password);
         if (response.data.length>0) {
           $scope.user = new Users();
           sessionStorage.setItem("userLogged", JSON.stringify(response.data[0]));
@@ -25,7 +24,6 @@
                                 userObj.business_office_idoffice,
                                 userObj.additional_features_users_idadditional_features_users
           );          
-          console.log(userObj);
           $scope.flag = true;
           $window.open('../../views/clientMainPage.html', "_self");
           return $scope.flag;
