@@ -38,12 +38,12 @@ class UsersDAO {
         );
        
         $sql = "SELECT users_id_user, users_name, users_firstname, users_lastname, users_email, 
-                       users_password, users_phone, users_description, state, last_login, grups_groups_id_group,
+                       users_password, users_phone, floor_description, state, last_login, groups_groups_id_group,
                        business_office_idoffice, additional_features_users_idadditional_features_users 
                 FROM users 
                 WHERE users_email        = ? 
                   AND users_password     = md5(?)
-                  AND Users.users_status = 1";
+                  AND state = 1";
         $response = $this->dbConnect->selectQuery($sql, $response);
         return $response->fetchAll();
     }

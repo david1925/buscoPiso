@@ -2,8 +2,8 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require_once "../src/model/Floor.class.php";
-require_once "../src/model/persist/FloorDAO.class.php";
+require_once "../src/model/Floors.class.php";
+require_once "../src/model/persist/FloorsDAO.class.php";
 
 
 // Get all users

@@ -2,8 +2,8 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require_once "../src/model/User.class.php";
-require_once "../src/model/persist/UserDAO.class.php";
+require_once "../src/model/Users.class.php";
+require_once "../src/model/persist/UsersDAO.class.php";
 
 
 // Get all users
@@ -20,7 +20,7 @@ $app->get('/users', function(Request $request, Response $response){
 
 // Check if session started, if not start session
 $app->post('/users/login/', function(Request $request, Response $response){
-    $username = $request->getParam("email");
+    $email = $request->getParam("email");
     $password = $request->getParam("password");
     try{
         $result = "";
