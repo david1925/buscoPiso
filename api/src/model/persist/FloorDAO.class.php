@@ -13,6 +13,42 @@ class FloorDAO {
         $this->dbConnect = new db;
     }
 
+    public function getAll() {
+      try{
+          $response = array();
+          $sql = "SELECT * FROM floors";
+          $response = $this->dbConnect->selectQuery($sql, $response);
+          return $response->fetchAll(PDO::FETCH_ASSOC);
+        }catch(PDOException $pe){
+          try{
+              $error = new ErrorLog("","",$pe->getMessage());
+              $errorDAO = new ErrorLogDAO();
+              $errorDAO->InsertErrorLog($error);
+            }catch(Exception $e){
+              $errorDAO = new ErrorLogDAO();
+              $errorDAO->WriteLogFile($e->getMessage());
+            }
+        }
+    }
+
+    public function getFloor($floor) {
+      try{
+          $response = array($floor->getFloorId());
+          $sql = "SELECT * FROM floors WHERE floors.idfloors=?";
+          $response = $this->dbConnect->selectQuery($sql, $response);
+          return $response->fetchAll(PDO::FETCH_ASSOC);
+        }catch(PDOException $pe){
+          try{
+              $error = new ErrorLog("","",$pe->getMessage());
+              $errorDAO = new ErrorLogDAO();
+              $errorDAO->InsertErrorLog($error);
+            }catch(Exception $e){
+              $errorDAO = new ErrorLogDAO();
+              $errorDAO->WriteLogFile($e->getMessage());
+            }
+        }
+    }
+
     public function getFeatures($estate) {
       try{
           $response = array();
