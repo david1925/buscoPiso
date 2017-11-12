@@ -1,5 +1,5 @@
 <?php
-    class Floor {
+    class Floors {
 
         //PROPERTIES
         var $floorId;

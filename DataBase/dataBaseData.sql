@@ -1,4 +1,4 @@
-/***************groups***************/
+﻿/***************groups***************/
 INSERT INTO groups (groups_name) VALUES ("Admin");
 INSERT INTO groups (groups_name) VALUES ("Registered");
 INSERT INTO groups (groups_name) VALUES ("Comercial");
@@ -60,7 +60,7 @@ VALUES
 
 /***************users***************/
 INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("David","García","Gómez","david.gargom.94@gmail.com",md5("david"),679614436,"",1,1);
-INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortivas@gmail.com",md5("pol"),687727135,"",1,1);
+INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Pol","Blancafort","Rivas","polblancafortrivas@gmail.com",md5("pol"),687727135,"",1,1);
 INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Oriol","Gual","Rovirosa","fcbgual@gmail.com",md5("oriol"),675647374,"",1,1);
 INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado","ApellidoRegistrado","SegundoApellidoRegistrado","registrado@mailinator.com",md5("registrado"),111222333,"Busco un piso en la zona de Hospitalet",1,2);
 INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES ("Registrado2","ApellidoRegistrado2","SegundoApellidoRegistrado2","registrado2@mailinator.com",md5("registrado2"),333222111,"Busco un piso en la zona de Esplugas",1,2);
@@ -8401,10 +8401,10 @@ INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno', 2);
 INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno2', 3);
 
 /***************land_type***************/
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,true,true);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (true,false,true);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,true,false);
-INSERT INTO land_type (urban,urbanizable,not_urbanizable) VALUES (false,false,false);
+INSERT INTO land_type (urban,urbanizable) VALUES (true,true);
+INSERT INTO land_type (urban,urbanizable) VALUES (true,false);
+INSERT INTO land_type (urban,urbanizable) VALUES (false,true);
+INSERT INTO land_type (urban,urbanizable) VALUES (false,false);
 
 /***************garages_features***************/
 INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (true,true,true);

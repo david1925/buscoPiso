@@ -1,5 +1,5 @@
 <?php
-    class User {
+    class Users {
 
         //PROPERTIES
         var $userId;
@@ -31,7 +31,6 @@
             $this->groupId = $groupId;
             $this->businessOfficeId = $businessOfficeId;
             $this->additionalFeaturesId = $additionalFeaturesId;
-
         }
 
         //GETTERS
@@ -62,6 +61,7 @@
         function setState($state) {$this->state = $state;}
         function setLastLogin($lastLogin) {$this->lastLogin = $lastLogin;}
         function setGroupId($groupId) {$this->groupId = $groupId;}
-
+        function setBusinnessOfficeId($businessOfficeId) {$this->getBusinnessOfficeId = $businessOfficeId;}
+        function setAdditionalFeaturesId($additionalFeaturesId) {$this->additionalFeaturesId = $additionalFeaturesId;}
     }
 ?>
