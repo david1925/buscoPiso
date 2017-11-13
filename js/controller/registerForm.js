@@ -151,15 +151,8 @@ this.selectMunicipality = function (selectedProvince) {
         });
     };
 this.validateRegisterForm = function () {
-      $http.post(Domain + 'api/public/floorsSearchUsers/add' + selectedProvince).then(function (response) {
-              $scope.arrayMunicipalities=[];
-              for(var i=0; i<response.data.length; i++){
-              $scope.municipalities= new Municipality();
-              $scope.municipalities.construct(response.data[i]["idmunicipalities"],response.data[i]["provinces_idprovinces"],response.data[i]["idautonomous_communities"],response.data[i]["dc"],response.data[i]["name"]);
-              $scope.arrayMunicipalities.push($scope.municipalities);
-            }
-            $scope.selectedProvince = selectedProvince;
-        });
+      $http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
+      });      
     };
   }]);
   angular.module('buscoPiso').directive("locationRegisterFormView", function (){

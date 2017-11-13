@@ -31,7 +31,7 @@ $app->get('/estates/features/{id}', function(Request $request, Response $respons
   }
     try{
         $result = "";
-        $users = new FloorDAO();
+        $users = new FloorsDAO();
         $result = $users->getFeatures($estates);
         echo json_encode($result);
     } catch(PDOException $e){

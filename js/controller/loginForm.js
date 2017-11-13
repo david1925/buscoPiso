@@ -25,7 +25,7 @@
                                 userObj.additional_features_users_idadditional_features_users
           );          
           $scope.flag = true;
-          $window.open('../../views/clientMainPage.html', "_self");
+          $window.open(Domain + 'views/clientMainPage.html', "_self");
           return $scope.flag;
         }
         else{
