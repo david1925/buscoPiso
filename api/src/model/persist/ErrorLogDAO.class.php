@@ -18,18 +18,18 @@ class ErrorLogDAO {
         return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function InsertErrorLog($error) {
-        $response = array($error->getError());
-        $sql = "INSERT INTO error_log  (error) VALUES(?);";
+    public function InsertErrorLog($error,$class,$function) {
+        $response = array($error->getError(),$class,$function);
+        $sql = "INSERT INTO error_log  (error,class,function) VALUES(?,?,?);";
         $response = $this->dbConnect->selectQuery($sql, $response);
         return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function WriteLogFile($error) {
+    public function WriteLogFile($error,$class,$function) {
       date_default_timezone_set('UTC');
       $date = date("Y-m-d H:i:s");
       $fp = fopen("../logs/errorLog.txt", "a");
-        fwrite($fp,$date . ";;;;;;" . $error);
+        fwrite($fp,$date . ";;;;;;" . $error . ";;;;;;El error esta en la clase: " . $class . ";;;;;;El error esta en la funcion: " . $function."\r\n"."\r\n");
     }
 }
 

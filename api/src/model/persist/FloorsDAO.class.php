@@ -22,11 +22,13 @@ class FloorsDAO {
         }catch(PDOException $pe){
           try{
               $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->InsertErrorLog($error);
+              $errorDAO->InsertErrorLog($error,$class,$function);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($e->getMessage(),$class,$function);
             }
         }
     }
@@ -40,11 +42,13 @@ class FloorsDAO {
         }catch(PDOException $pe){
           try{
               $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->InsertErrorLog($error);
+              $errorDAO->InsertErrorLog($error,$class,$function);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($e->getMessage(),$class,$function);
             }
         }
     }
@@ -58,11 +62,13 @@ class FloorsDAO {
         }catch(PDOException $pe){
           try{
               $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->InsertErrorLog($error);
+              $errorDAO->InsertErrorLog($error,$class,$function);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($e->getMessage(),$class,$function);
             }
         }
     }

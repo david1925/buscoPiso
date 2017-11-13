@@ -8,7 +8,6 @@ require_once "../src/model/persist/ErrorLogDAO.class.php";
 
 class UsersDAO {
     private $dbConnect;
-
     public function __construct() {
         $this->dbConnect = new db;
     }
@@ -22,11 +21,13 @@ class UsersDAO {
         }catch(PDOException $pe){
           try{
               $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->InsertErrorLog($error);
+              $errorDAO->InsertErrorLog($error,$class,$function);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($e->getMessage(),$class,$function);
             }
         }
     }
@@ -49,24 +50,23 @@ class UsersDAO {
     }
 
     public function registerUser($user) {
-      //echo "Hasta aquí funciona";
         try{
           echo "Por aquí paso";
           $response = array($user->getName(),$user->getFirstname(),$user->getLastname(),$user->getEmail(),$user->getPassword(),$user->getPhone());
           print_r($response);
           $sql = "INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES (?,?,?,?,md5(?),?,'',0,2);";
-          //$sql = "SELECT * FROM users";
-          //$response = array();
           $result = $this->dbConnect->selectQuery($sql, $response);
           return $result->fetchAll(PDO::FETCH_ASSOC);
         }catch(PDOException $pe){
           try{
               $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->InsertErrorLog($error);
+              $errorDAO->InsertErrorLog($error,$class,$function);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($e->getMessage(),$class,$function);
             }
         }
     }
