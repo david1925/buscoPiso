@@ -5,6 +5,11 @@
 
    angular.module("buscoPiso").config(['$translateProvider', function ($translateProvider) {
   $translateProvider.translations("en", {
+    /***** LOGIN *****/
+    "Incorrect email or password": "Incorrect email or password",
+    "Remember me": "Remember me",
+    "Not registered?": "Not registered?",
+    /***** END LOGIN *****/
   	"Wall": "Wall",
   	"Friends list": "Friends list",
   	"Purchased games": "Purchased games",
@@ -53,6 +58,11 @@
   });
  
   $translateProvider.translations("es", {
+    /***** LOGIN *****/
+    "Incorrect email or password": "Email o contraseña incorrectos",
+    "Remember me": "Recuérdame",
+    "Not registered?": "¿No estás registrado?",
+    /***** END LOGIN *****/
   	"Wall": "Muro",
   	"Friends list": "Lista de amigos",
   	"Purchased games": "Juegos comprados",
@@ -100,7 +110,12 @@
     "Congratulations, your email has been sent correctly, we will reply you as soon as possible": "Felicidades, tu correo se ha enviado correctamente, te responderemos con la mayor brevedad posible"
   });
   
-  $translateProvider.translations("ca", {
+  $translateProvider.translations("ca", {    
+    /***** LOGIN *****/
+    "Incorrect email or password": "Email o contrassenya incorrectes",
+  	"Remember me": "Recorda'm",
+    "Not registered?": "No estàs registrat?",
+    /***** END LOGIN *****/
   	"Wall": "Mur",
   	"Friends list": "Llista d'amics",
   	"Purchased games": "Jocs comprats",

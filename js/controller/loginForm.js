@@ -2,7 +2,7 @@
   angular.module("buscoPiso").controller("LoginController", ['$scope', '$http', '$translate', 'Domain', '$window', function($scope, $http, $translate, Domain, $window) {
   
     $scope.registerRoute = Domain + "views/registerForm.html";
-    
+
     this.login = function () {
       $scope.flag;
       $http.post(Domain + 'api/public/users/login/', {"email" : $scope.email, "password" : $scope.password}).then(function (response) {
