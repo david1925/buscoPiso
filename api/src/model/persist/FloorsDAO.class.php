@@ -21,12 +21,14 @@ class FloorsDAO {
           return $response->fetchAll(PDO::FETCH_ASSOC);
         }catch(PDOException $pe){
           try{
-              $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
+              $error = new ErrorLog("","",$pe->getMessage(),$class,$function);
               $errorDAO = new ErrorLogDAO();
               $errorDAO->InsertErrorLog($error);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($error);
             }
         }
     }
@@ -39,12 +41,14 @@ class FloorsDAO {
           return $response->fetchAll(PDO::FETCH_ASSOC);
         }catch(PDOException $pe){
           try{
-              $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
+              $error = new ErrorLog("","",$pe->getMessage(),$class,$function);
               $errorDAO = new ErrorLogDAO();
               $errorDAO->InsertErrorLog($error);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($error);
             }
         }
     }
@@ -57,12 +61,14 @@ class FloorsDAO {
           return $response->fetchAll(PDO::FETCH_ASSOC);
         }catch(PDOException $pe){
           try{
-              $error = new ErrorLog("","",$pe->getMessage());
+              $class = get_class($this);
+              $function = __FUNCTION__;
+              $error = new ErrorLog("","",$pe->getMessage(),$class,$function);
               $errorDAO = new ErrorLogDAO();
               $errorDAO->InsertErrorLog($error);
             }catch(Exception $e){
               $errorDAO = new ErrorLogDAO();
-              $errorDAO->WriteLogFile($e->getMessage());
+              $errorDAO->WriteLogFile($error);
             }
         }
     }

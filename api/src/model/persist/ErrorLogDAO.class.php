@@ -19,8 +19,8 @@ class ErrorLogDAO {
     }
 
     public function InsertErrorLog($error) {
-        $response = array($error->getError());
-        $sql = "INSERT INTO error_log  (error) VALUES(?);";
+        $response = array($error->getError(),$error->getClass(),$error->getFunction());
+        $sql = "INSERT INTO error_log  (error,class,function) VALUES(?,?,?);";
         $response = $this->dbConnect->selectQuery($sql, $response);
         return $response->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -29,7 +29,7 @@ class ErrorLogDAO {
       date_default_timezone_set('UTC');
       $date = date("Y-m-d H:i:s");
       $fp = fopen("../logs/errorLog.txt", "a");
-        fwrite($fp,$date . ";;;;;;" . $error);
+        fwrite($fp,$date . ";;;;;;" . $error->getError() . ";;;;;;El error esta en la clase: " . $error->getClass() . ";;;;;;El error esta en la funcion: " . $error->getFunction()."\r\n"."\r\n");
     }
 }
 

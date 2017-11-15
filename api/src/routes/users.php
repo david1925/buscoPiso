@@ -10,7 +10,7 @@ require_once "../src/model/persist/UsersDAO.class.php";
 $app->get('/users', function(Request $request, Response $response){
     try{
         $result = "";
-        $users = new UserDAO();
+        $users = new UsersDAO();
         $result = $users->getAll();
         echo json_encode($result);
     } catch(PDOException $e){

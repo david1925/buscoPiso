@@ -1,27 +1,20 @@
-2017-10-01 13:47:49;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-13 00:49:22;;;;;;SQLSTATE[HY000]: General error2017-11-13 00:52:00;;;;;;SQLSTATE[HY000]: General error2017-11-13 00:52:11;;;;;;SQLSTATE[HY000]: General error2017-11-13 00:54:03;;;;;;SQLSTATE[HY000]: General error2017-11-13 00:55:04;;;;;;SQLSTATE[HY000]: General error2017-11-13 00:56:02;;;;;;SQLSTATE[HY000]: General error2017-11-13 01:01:25;;;;;;SQLSTATE[HY000]: General error2017-11-13 01:04:16;;;;;;SQLSTATE[HY000]: General error2017-11-13 01:06:57;;;;;;SQLSTATE[HY000]: General error2017-11-13 01:10:20;;;;;;SQLSTATE[HY000]: General error2017-11-13 01:14:12;;;;;;SQLSTATE[HY000]: General error2017-11-15 13:47:26;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:26;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:27;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:27;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:27;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:27;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:30;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:30;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:31;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:31;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:31;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:31;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:35;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:36;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:36;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:37;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:37;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:37;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:39;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:40;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:41;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:41;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:41;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:47:42;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:48:06;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
-2017-11-15 13:48:17;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+2017-11-13 23:21:32;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
+;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
+
+2017-11-13 23:21:37;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
+;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
+
+2017-11-13 23:24:13;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
+
+2017-11-13 23:29:09;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: AdditionalFeaturesDAO;;;;;;El error esta en la funcion: getAll
+
+2017-11-13 23:30:04;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: AdditionalFeaturesDAO;;;;;;El error esta en la funcion: getColumnNames
+
+2017-11-13 23:31:35;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: AutonomousCommunityDAO;;;;;;El error esta en la funcion: getAll
+
+2017-11-14 20:59:42;;;;;;SQLSTATE[42S02]: Base table or view not found: 1146 Table 'buscopiso.user' doesn't exist;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
+
+2017-11-14 21:00:33;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
+;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
+
+>>>>>>> 8919329fdd4cb8ac85dbae84d6bf7e6a3a0e9bde
