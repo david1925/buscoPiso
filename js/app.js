@@ -9,6 +9,7 @@
     "Incorrect email or password": "Incorrect email or password",
     "Remember me": "Remember me",
     "Not registered?": "Not registered?",
+    "Have you forgotten your password?": "Have you forgotten your password?",
     /***** END LOGIN *****/
   	"Wall": "Wall",
   	"Friends list": "Friends list",
@@ -54,7 +55,6 @@
     "Your shopping cart it's empty": "Your shopping cart it's empty",
     "Check your email, a confirmation link has been sent": "Check your email, a confirmation link has been sent",
     "Congratulations, your email has been sent correctly, we will reply you as soon as possible": "Congratulations, your email has been sent correctly, we will reply you as soon as possible"
-
   });
  
   $translateProvider.translations("es", {
@@ -62,6 +62,8 @@
     "Incorrect email or password": "Email o contraseña incorrectos",
     "Remember me": "Recuérdame",
     "Not registered?": "¿No estás registrado?",
+    "Have you forgotten your password?": "¿Has olvidado tu contraseña?",
+    "Reset your password": "Reset your password",
     /***** END LOGIN *****/
   	"Wall": "Muro",
   	"Friends list": "Lista de amigos",
@@ -115,6 +117,9 @@
     "Incorrect email or password": "Email o contrassenya incorrectes",
   	"Remember me": "Recorda'm",
     "Not registered?": "No estàs registrat?",
+    "Have you forgotten your password?": "Has oblidat la teva contrassenya?",
+    "Reset your password": "Reestablece tu contraseña",
+    "Reset your password": "Reestableix la teva contrassenya",
     /***** END LOGIN *****/
   	"Wall": "Mur",
   	"Friends list": "Llista d'amics",
