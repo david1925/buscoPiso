@@ -1,7 +1,11 @@
-#formulary {
-    margin-top: 7%; 
+#formulary {    
+    font-family: montserrat;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);    
     border: 1px solid #e7e7e7;
-    padding: 2% 0% 2% 0%;
+    padding: 2.5% 0% 1% 0%;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -14,7 +18,7 @@
     box-sizing: border-box;
     font-family: montserrat;
     color: #2C3E50;
-    font-size: 13px;
+    font-size: 13px;  
 }
 
 p {
