@@ -1,51 +1,42 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-body,
 html {
-    width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-}
-
-html {
-   height: 100%;
+  
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-.topnav {
-    font-size: 14px; 
-}
-
-#header {
-    margin-bottom: 75px;
+    position: relative;
+    margin: 0;
+    padding: 6rem 0rem 13.85rem 0rem;
+    min-height: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .footer {
     position: absolute;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    height: 10%;
-    padding: 25px 0;
-    background-color: #f8f8f8;
-    border-top: 1px solid #e7e7e7;
+    left: 0;
+    padding: 2.5rem 0rem 2.5rem 0rem;
+    background-color: #efefef;
+    text-align: center;
+    border-top: solid 1px #e7e7e7;
 }
 
+/*BANNER SOCIAL BUTTONS*/  
 .banner {
-    padding: 50px 0;
-    margin: 50px 0px 100px 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2.5rem 0rem 8.5rem 0rem;
     color: #f8f8f8;
     background: url(../images/banner/banner.jpg) no-repeat center center;
     background-size: cover;
@@ -62,35 +53,7 @@ body {
 }
 
 .banner-social-buttons {
-    float: right;
     margin-top: 0;
 }
 
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-@media(max-width:767px) {
-    .banner h2 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-}
-
-p.copyright {
-    margin: 15px 0 0;
-}
+  

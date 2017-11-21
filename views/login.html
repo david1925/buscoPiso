@@ -24,72 +24,59 @@
     <script src="../js/app.js" type="text/javascript" xml:space="preserve"></script>
     <!-- CONTROLLER -->
     <script src="../js/controller/loginForm.js" type="text/javascript" xml:space="preserve"></script>
-    <script src="../js/controller/headerAndFooter.js" type="text/javascript" xml:space="preserve"></script>
+    <script src="../js/controller/headerAndFooter.js" type="text/javascript" xml:space="preserve"></script> 
     
     <!-- MODEL -->
     <script src="../js/model/Users.js" type="text/javascript" xml:space="preserve"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
     <!-- MONTSERRAT FONT -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">   
 </head>
 <body ng-controller="LoginController as LoginCtrl">
+
     <div ng-include="'headerAndFooter.html'"></div>
-    <div id="formulary" class="container col-xs-8 col-sm-6 col-lg-4">
-        <div class="col-sm-10 col-sm-offset-1">
+    
+    <div id="formulary" class="container col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
             <h2 class="h2">Login</h2>
             <hr>
-        </div>
-        <form method="post" name="loginManagement" novalidate ng-submit="loginManagement.$valid && !LoginCtrl.login()">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-user"></i>
-                            </span>
-                            <input type="email" id="email" name='email' ng-model="email" class="form-control" placeholder="Email address">
-                        </div>
+            <form name="loginManagement" method="post" novalidate ng-submit="loginManagement.$valid && !LoginCtrl.login()">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        <input type="email" id="email" name='email' ng-model="email" class="form-control" placeholder="Email address">
+                    </div>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                        <input id="password" class="form-control" name='password' ng-model="password" type="password" placeholder="Password">
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"><div translate="Remember me"></div>
+                        </label>
                     </div>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="input-group">
-                            <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-lock"></i>
-                            </span>
-                            <input type="password" id="password" name='password' ng-model="password" class="form-control" placeholder="Password">
-                        </div>
-                    </div>
+                <div class="alert alert-danger col-xs-12" ng-if="flag==false" translate="Incorrect email or password"></div>
+                <div class="form-group">
+                    <button class="btn btn-success col-xs-12" name="insert_user" type="button" value="ok" ng-click="LoginCtrl.login()">Submit</button>
+                    <div><br></div><br>
+                    <hr>
+                    <div class="link">Not registered?<a href="{{registerRoute}}"> Create an account</a></div>
+                    <div class="link">Have you forgotten your password?<a href=""> Reset your password</a></div>   
                 </div>
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <div class="checkbox">
-                            <label><input type="checkbox"><div translate="Remember me"></div></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-10 col-sm-offset-1 alert alert-danger" ng-if="flag==false" translate="Incorrect email or password">.</div>
-                <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                        <button type="button" class="btn btn-success col-sm-12" name="insert_user" value="ok" ng-click="LoginCtrl.login()">Submit</button>
-                        <div class="col-sm-12"><br>
-                            <p>
-                                <div translate="Not registered?"></div>
-                                <a href="{{registerRoute}}" translate="Create an account"></a>
-                            </p>
-                            <p>    
-                                <div translate="Have you forgotten your password?"></div>                        
-                                <a href="" translate="Reset your password"></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+            </form>
     </div>
 </body>
 </html>
