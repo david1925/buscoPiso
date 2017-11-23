@@ -18,3 +18,5 @@
 ;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
 
 >>>>>>> 8919329fdd4cb8ac85dbae84d6bf7e6a3a0e9bde
+2017-11-23 12:35:46;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
