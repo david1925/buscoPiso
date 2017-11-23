@@ -14,7 +14,7 @@ html {
 body {
     position: relative;
     margin: 0;
-    padding: 6rem 0rem 13.85rem 0rem;
+    padding: 3rem 0rem 10.85rem 0rem;
     min-height: 100%;
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
@@ -36,7 +36,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 2.5rem 0rem 8.5rem 0rem;
+    padding: 1rem 0rem 7rem 0rem;
     color: #f8f8f8;
     background: url(../images/banner/banner.jpg) no-repeat center center;
     background-size: cover;

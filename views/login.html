@@ -40,7 +40,8 @@
 
     <div ng-include="'headerAndFooter.html'"></div>
     
-    <div id="formulary" class="container col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+    <div id="formulary" class="container">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
             <h2 class="h2">Login</h2>
             <hr>
             <form name="loginManagement" method="post" novalidate ng-submit="loginManagement.$valid && !LoginCtrl.login()">
@@ -77,6 +78,7 @@
                     <div class="link">Have you forgotten your password?<a href=""> Reset your password</a></div>   
                 </div>
             </form>
+        </div>
     </div>
 </body>
 </html>
