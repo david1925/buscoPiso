@@ -17,3 +17,21 @@
 2017-11-14 21:00:33;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
 ;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
 
+2017-11-15 21:11:16;;;;;;SQLSTATE[42S02]: Base table or view not found: 1146 Table 'buscopiso.municipalitis' doesn't exist;;;;;;El error esta en la clase: MunicipalityDAO;;;;;;El error esta en la funcion: getAllFromProvince
+
+2017-11-16 00:21:04;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-11-28 00:44:58;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-11-28 00:47:17;;;;;;SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'pablo@pablo.com' for key 'users_email_UNIQUE';;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-11-28 22:22:57;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-11-28 22:24:35;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-11-28 22:26:10;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-11-28 22:45:59;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-11-28 22:47:00;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+

@@ -152,9 +152,42 @@ this.selectMunicipality = function (selectedProvince) {
     };
 this.validateRegisterForm = function () {
       $http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
+        console.log("Este es el mensaje que se mostrará");
+        console.log(response.data);
       });      
     };
+   /*this.validateRegisterForm = function () {
+   var getLogData = function() {
+        return $http({
+            url : Domain + 'api/public/users/register/',
+            method : 'POST',
+            async : false,
+            cache : false,
+            headers : { 'Accept' : 'application/json' , 'Pragma':'no-cache'},
+            params : {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}
+        }).success(function(data) {
+           // for each log entry in data, populate logEntries
+           // push(new LogEntry( stuff from data ))...
+        });
+      }
+      $.ajax(
+      {
+          type: "POST",
+          async: true,
+          url: Domain + 'api/public/users/register/',
+          data:  "{'name:" + $scope.name + ", 'firstname':" + $scope.firstName + ", 'lastname':" + $scope.lastName + ", 'phone':" + $scope.phone + ",'email':" + $scope.email + ", 'password':" + $scope.password + ",'repeatPassword':" + $scope.confirmPassword + "}",
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          success: function () {
+              alert("Ha funcionado");
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+              alert(xhr.status + " " + thrownError);
+          }
+      });
+   };*/
   }]);
+/********************************************************************************************************************************************************************/
   angular.module('buscoPiso').directive("locationRegisterFormView", function (){
     return {
       restrict: 'E',

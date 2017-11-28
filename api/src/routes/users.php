@@ -3,6 +3,7 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 require_once "../src/model/Users.class.php";
+require_once "../src/model/Floors.class.php";
 require_once "../src/model/persist/UsersDAO.class.php";
 
 
@@ -39,6 +40,24 @@ $app->post('/users/login/', function(Request $request, Response $response){
     }
 });
 
+//Check if an email exists in bbdd
+$app->post('/users/checkEmailUser/', function(Request $request, Response $response){
+    $email = $request->getParam("email");
+    try{
+        $result = "";
+        $user = new Users("", "", "", "", $email,"", "", "", "", "", "", "", "", "", "");
+        $helper = new UsersDAO();
+        $result = $helper->checkEmailRegisterUser($user);
+        if($result==null){
+        	echo "Ya existe un usuario registrado con ese correo";
+        }else{
+            echo "1";
+        }
+    } catch(PDOException $e){
+        echo '{"error": {"text": '.$e->getMessage().'}}';
+    }
+});
+
 // Register a new user
 $app->post('/users/register/', function(Request $request, Response $response){
     $name = $request->getParam("name");
@@ -48,35 +67,82 @@ $app->post('/users/register/', function(Request $request, Response $response){
     $email = $request->getParam("email");
     $password = $request->getParam("password");
     $repeatPassword = $request->getParam("repeatPassword");
-    if(!isset($name) || $name=="" || $name=="undefined"){
-      return "Name is incorrect or null";
+    $checkEmailRegisterUser = new Users("","","","",$email,"","","","","","","","");
+    $checkEmailRegisterUserHelper = new UsersDAO();
+    $checkEmailRegisterUserResult = $checkEmailRegisterUserHelper->checkEmailRegisterUser($checkEmailRegisterUser);
+    if($checkEmailRegisterUserResult!=null){
+          return "Ya existe un usuario registrado con ese correo";
     }else{
-      if(!isset($firstname) || $firstname=="" || $firstname=="undefined"){
-        return "Firstname is incorrect or null";
+      $checkPhoneRegisterUser = new Users("","","","","","",$phone,"","","","","","");
+      $checkPhoneRegisterUserHelper = new UsersDAO();
+      $checkPhoneRegisterUserResult = $checkPhoneRegisterUserHelper->checkPhoneRegisterUser($checkPhoneRegisterUser);
+      if($checkPhoneRegisterUserResult!=null){
+        return "Ya existe un usuario registrado con ese teléfono";
       }else{
-        if(!isset($email) || $email=="" || $email=="undefined"){
-          return "Email is incorrect or null";
+        if(!isset($name) || $name=="" || $name=="undefined"){
+          return "Name is incorrect or null";
         }else{
-          if(!isset($password) || !isset($repeatPassword) || $password=="" || $repeatPassword=="" || $password=="undefined" || $repeatPassword=="undefined"){
-            return "Password or repeat password is incorrect or null";
+          if(!isset($firstname) || $firstname=="" || $firstname=="undefined"){
+            return "Firstname is incorrect or null";
           }else{
-            if(strcmp($password, $repeatPassword)==0){
-              try{
-                  $result = "";
-                  $user = new Users("", $name, $firstname, $lastname, $email, $password, $phone, "", "", "", "", "", "");
-                  $helper = new UsersDAO();
-                  $result = $helper->registerUser($user);
-                  print_r($result);
-              } catch(PDOException $e){
-                  echo '{"error": {"text": '.$e->getMessage().'}}';
-              }
+            if(!isset($email) || $email=="" || $email=="undefined"){
+              return "Email is incorrect or null";
             }else{
-              return "Passwords don't match";
+              if(!isset($password) || !isset($repeatPassword) || $password=="" || $repeatPassword=="" || $password=="undefined" || $repeatPassword=="undefined"){
+                return "Password or repeat password is incorrect or null";
+              }else{
+                if(strcmp($password, $repeatPassword)==0){
+                  try{
+                      $result = "";
+                      $user = new Users("", $name, $firstname, $lastname, $email, $password, $phone, "", "", "", "", "", "");
+                      $helper = new UsersDAO();
+                      $result = $helper->registerUser($user);
+                      return "true";
+                  } catch(PDOException $e){
+                      echo '{"error": {"text": '.$e->getMessage().'}}';
+                  }
+                }else{
+                  return "Passwords don't match";
+                }
+              }
             }
           }
         }
       }
     }
+});
 
-
+// Insert a userSearch
+$app->post('/users/insert/userSearch', function(Request $request, Response $response){
+    $state = $request->getParam("state");
+    $email = $request->getParam("email");
+    try{
+        switch($state){
+          case "Pisos":
+            $price = $request->getParam("price");
+            $squareMeters = $request->getParam("squareMeters");
+            $bedrooms = $request->getParam("bedrooms");
+            $publicationDate = $request->getParam("publicationDate");
+            $municipalities = $request->getParam("municipalities");
+            $floorCondition = $request->getParam("floorConditions");
+            $contract = $request->getParam("contract");
+            $province = $request->getParam("province");
+              //$floor = new Floors("");
+            break;
+          case "Oficinas":
+            echo "Se ha seleccionado oficinas";
+            break;
+          case "Garages":
+            echo "Se ha seleccionado garages";
+            break;
+          case "Trasteros":
+            echo "Se ha seleccionado trasteros";
+            break;
+          case "Terrenos":
+            echo "Se ha seleccionado terrenos";
+            break;
+        }
+    } catch(PDOException $e){
+        echo '{"error": {"text": '.$e->getMessage().'}}';
+    }
 });
