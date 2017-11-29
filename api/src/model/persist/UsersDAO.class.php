@@ -13,7 +13,7 @@ class UsersDAO {
     }
 
     public function getAll() {
-        try{
+        try {
           $response = array();
           $sql = "SELECT * FROM users";
           $response = $this->dbConnect->selectQuery($sql, $response);
@@ -25,7 +25,7 @@ class UsersDAO {
               $error = new ErrorLog("","",$pe->getMessage(),$class,$function);
               $errorDAO = new ErrorLogDAO();
               $errorDAO->InsertErrorLog($error);
-            }catch(Exception $e){
+            } catch (Exception $e){
               $errorDAO = new ErrorLogDAO();
               $errorDAO->WriteLogFile($error);
             }
@@ -33,11 +33,11 @@ class UsersDAO {
     }
 
     public function Login($user) {
+      try {
         $response = array(
             $user->getEmail(),
             $user->getPassword()
         );
-
         $sql = "SELECT users_id_user, users_name, users_firstname, users_lastname, users_email,
                        users_password, users_phone, floor_description, state, last_login, groups_groups_id_group,
                        business_office_idoffice, additional_features_users_idadditional_features_users
@@ -47,6 +47,16 @@ class UsersDAO {
                   AND state          = 1";
         $response = $this->dbConnect->selectQuery($sql, $response);
         return $response->fetchAll(PDO::FETCH_ASSOC);
+      } catch (PDOException $pe){
+        try {
+          $error = new ErrorLog("","",$pe->getMessage());
+          $errorDAO = new ErrorLogDAO();
+          $errorDAO->InsertErrorLog($error);
+        } catch (Exception $e){
+          $errorDAO = new ErrorLogDAO();
+          $errorDAO->WriteLogFile($e->getMessage());
+        }
+      }
     }
 
     public function registerUser($user) {

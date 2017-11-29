@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BuscoPiso</title>
-    
+
     <!--JQUERY-->
     <script src="../vendors/jquery/jquery-3.1.1.min.js" type="text/javascript" xml:space="preserve"></script>
     <!--ANGULAR-->
@@ -24,8 +24,8 @@
     <!-- APP -->    
     <script src="../js/app.js" type="text/javascript" xml:space="preserve"></script>
     <!-- CONTROLLER -->
-    <script src="../js/controller/loginForm.js" type="text/javascript" xml:space="preserve"></script>
-    <script src="../js/controller/headerAndFooter.js" type="text/javascript" xml:space="preserve"></script>     
+    <script src="../js/controller/contact.js" type="text/javascript" xml:space="preserve"></script>
+    <script src="../js/controller/headerAndFooter.js" type="text/javascript" xml:space="preserve"></script>    
     <!-- MODEL -->
     <script src="../js/model/Users.js" type="text/javascript" xml:space="preserve"></script>
 
@@ -37,13 +37,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">   
 
 </head>
-<body ng-controller="LoginController as LoginCtrl">
-
+<body ng-controller="ContactController as ContactCtrl">
+        
     <div ng-include="'headerAndFooter.html'"></div>
     
     <div id="formulary" class="container">
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
-            <h2 class="h2">Login</h2>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <h2 class="h2">Contact</h2>
             <hr>
             <form name="loginManagement" method="post" novalidate ng-submit="loginManagement.$valid && !LoginCtrl.login()">
                 <div class="form-group">
@@ -57,19 +57,13 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon">
-                            <i class="glyphicon glyphicon-lock"></i>
+                            <i class="glyphicon glyphicon-pencil"></i>
                         </span>
-                        <input id="password" class="form-control" name='password' ng-model="password" type="password" placeholder="Password">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" id="comment"></textarea>
+                        </div>
                     </div>
                 </div> 
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"><div translate="Remember me"></div>
-                        </label>
-                    </div>
-                </div>
-                <div class="alert alert-danger col-xs-12" ng-if="flag==false" translate="Incorrect email or password"></div>
                 <div class="form-group">
                     <button class="btn btn-success col-xs-12" name="insert_user" type="button" value="ok" ng-click="LoginCtrl.login()">Submit</button>
                     <div><br></div><br>

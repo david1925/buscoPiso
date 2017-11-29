@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="buscoPiso">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BuscoPiso</title>
+
+    <!--JQUERY-->
+    <script src="../vendors/jquery/jquery-3.1.1.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--ANGULAR-->
+    <script src="../vendors/angular/angular.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--BOOTSTRAP-->
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--ANGULAR BOOTSTRAP-->
+    <script src="../vendors/bootstrap/js/ui-bootstrap-tpls-2.3.1.min.js" type="text/javascript" xml:space="preserve"></script>
+    <!--ANGULAR PAGINATION-->
+    <script src="../vendors/angular/dirPagination.js" type="text/javascript" xml:space="preserve"></script>
+    <!--ANGULAR TRANSLATE-->
+    <script src="../vendors/angular-translate/angular-translate.js" type="text/javascript" xml:space="preserve"></script>
+    <script src="../vendors/angular-translate/angular-translate.min.js" type="text/javascript" xml:space="preserve"></script>
+
+    <!-- APP -->    
+    <script src="../js/app.js" type="text/javascript" xml:space="preserve"></script>
+    <!-- CONTROLLER -->
+    <script src="../js/controller/contact.js" type="text/javascript" xml:space="preserve"></script>
+    <script src="../js/controller/headerAndFooter.js" type="text/javascript" xml:space="preserve"></script>    
+    <!-- MODEL -->
+    <script src="../js/model/Users.js" type="text/javascript" xml:space="preserve"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/faq.css" />
+    <!-- MONTSERRAT FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">   
+
+</head>
+<body ng-controller="ContactController as ContactCtrl">
+        
+    <div ng-include="'headerAndFooter.html'"></div>
+    
+    <div id="faqs" class="container">
+        <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 text-justify">
+            <div class="row">
+                <h1 class="h2">Frequently Asked Questions</h1>
+            </div>
+            <div class="row">
+                <details>
+                    <summary>My Windows 7 product key won't verify. What's the problem?</summary>
+                    <div class="content">
+                        <p> The most common issue is the use of a product key for a product not currently
+                            supported by the site such as an Upgrade key, an MSDN key, product keys for 
+                            pre-installed media or an Enterprise edition key. For access to MSDN products 
+                            or Enterprise edition visit the MSDN Portal or the Volume Licensing Service 
+                            Center. Upgrades and pre-installed media are not currently supported by the 
+                            tools on the site.</p>
+                        <p >If you believe you have a valid product key and are still receiving an error,
+                            please contact Support.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="row">
+                <details>
+                    <summary>I bought Windows 7 through a website. After talking to the merchant, 
+                            I was told I had a "system builder" product key. Why doesn't that work?</summary>
+                    <div class="content">
+                        <p> Not all “system builder” products for Windows 7 are currently available 
+                            on the site. We are working to add more, but for now, we suggest you contact Support.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="row">
+                <details>
+                    <summary>I purchased my copy of Windows through a university. Can I download it here?</summary>
+                    <div class="content">
+                        <p> Yes, but you’ll need your product key. Go to the Academic Products download 
+                            page and select the version of Windows to begin.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="row">
+                <details>
+                    <summary>I'm running a Mac and get an error message when I click Download Tool Now. What's wrong?</summary>
+                    <div class="content">
+                        <p> The media creation tool (Download Tool Now button) will not run on a Mac device. You 
+                            can still download an ISO file with one of these options: Windows 8.1 or Windows 10. This 
+                            will give you a web-based download option that should run on most browsers.</p>
+                    </div>
+                </details>
+            </div>
+            <div class="row">
+                <details>
+                    <summary>Windows came pre-installed on my device, can I use media from this site to download and install?</summary>
+                    <div class="content">
+                        <p> Before using operating system copies from this site for install, re-install or recovery
+                            on devices with pre-installed operating systems, see your device manufacturer or reseller
+                            for the customized drivers and applications specific to your machine. Using operating
+                            systems copied from this site for install, re-install or recovery may void your support
+                            agreement with your manufacturer or reseller. Any drivers or programs that were installed
+                            by the device manufacturer or reseller may be removed during installation.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

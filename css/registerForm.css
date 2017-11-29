@@ -1,32 +1,23 @@
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-/*basic reset*/
-* {margin: 0; padding: 0;}
-
 html {
 	height: 100%;
-	/*Image only BG fallback*/
-
-	/*background = gradient + image pattern combo*/
-	/*background:
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 }
-
+ /*
 body {
 	font-family: montserrat, arial, verdana;
-	height: 100%; 
-    min-height: 100%;
-    position: relative;
 }
+*/
+
 /*form styles*/
 #msform {
 	width: 400px;
 	margin: 50px auto;
-	margin-bottom: 170px;
 	text-align: center;
 	position: relative;
 }
+
 #msform fieldset {
 	/*background: white;*/
 	border: 0 none;
@@ -68,9 +59,13 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
+
+/*
 #msform .action-button:hover, #msform .action-button:focus {
-	/*box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;*/
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
+*/
+
 /*headings*/
 .fs-title {
 	font-size: 15px;

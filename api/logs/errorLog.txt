@@ -1,7 +1,7 @@
-2017-11-13 23:21:32;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+2017-11-13 23:21:32;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
 ;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
 
-2017-11-13 23:21:37;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+2017-11-13 23:21:37;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
 ;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
 
 2017-11-13 23:24:13;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
@@ -14,9 +14,10 @@
 
 2017-11-14 20:59:42;;;;;;SQLSTATE[42S02]: Base table or view not found: 1146 Table 'buscopiso.user' doesn't exist;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
 
-2017-11-14 21:00:33;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+2017-11-14 21:00:33;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexiï¿½n ya que el equipo de destino denegï¿½ expresamente dicha conexiï¿½n.
 ;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
 
+<<<<<<< HEAD
 2017-11-15 21:11:16;;;;;;SQLSTATE[42S02]: Base table or view not found: 1146 Table 'buscopiso.municipalitis' doesn't exist;;;;;;El error esta en la clase: MunicipalityDAO;;;;;;El error esta en la funcion: getAllFromProvince
 
 2017-11-16 00:21:04;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
@@ -34,4 +35,8 @@
 2017-11-28 22:45:59;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
 
 2017-11-28 22:47:00;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+=======
+>>>>>>> 8919329fdd4cb8ac85dbae84d6bf7e6a3a0e9bde
+2017-11-23 12:35:46;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+>>>>>>> bded20f752970af2fa5af9138b4405a7402dc612
 
