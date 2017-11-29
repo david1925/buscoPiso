@@ -152,9 +152,12 @@ this.selectMunicipality = function (selectedProvince) {
     };
 this.validateRegisterForm = function () {
       $http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
-        console.log("Este es el mensaje que se mostrará");
-        console.log(response.data);
-      });      
+        if(response.data=="true"){
+          $http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
+          
+          });  
+        }
+      });
     };
    /*this.validateRegisterForm = function () {
    var getLogData = function() {
