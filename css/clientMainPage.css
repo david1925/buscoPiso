@@ -10,6 +10,10 @@
 	font-size: 13px;
 }
 
+#datosPersonales {
+	padding-top: 2rem;
+}
+
 .nav>li>#chats:focus, .nav>li>#chats:hover {
     background-color: #2e6da4;
 }
