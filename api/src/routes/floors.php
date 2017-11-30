@@ -10,7 +10,7 @@ require_once "../src/model/persist/FloorsDAO.class.php";
 $app->get('/floors', function(Request $request, Response $response){
     try{
         $result = "";
-        $provinces = new FloorDAO();
+        $provinces = new FloorsDAO();
         $result = $provinces->getAll();
         echo json_encode($result);
     } catch(PDOException $e){
@@ -22,8 +22,8 @@ $app->get('/floors/{id}', function(Request $request, Response $response){
   $id = $request->getAttribute("id");
     try{
         $result = "";
-        $floor = new Floor($id,"","","","","","","","","");
-        $floors = new FloorDAO();
+        $floor = new Floors($id,"","","","","","","","","");
+        $floors = new FloorsDAO();
         $result = $floors->getFloor($floor);
         echo json_encode($result);
     } catch(PDOException $e){

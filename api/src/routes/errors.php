@@ -17,3 +17,15 @@ $app->get('/errors', function(Request $request, Response $response){
         echo '{"error": {"text": '.$e->getMessage().'}';
     }
 });
+
+// Get one error
+$app->get('/errors/{id}', function(Request $request, Response $response){
+    try{
+        $result = "";
+        $errors = new ErrorLogDAO();
+        $result = $errors->getAll();
+        echo json_encode($result);
+    } catch(PDOException $e){
+        echo '{"error": {"text": '.$e->getMessage().'}';
+    }
+});
