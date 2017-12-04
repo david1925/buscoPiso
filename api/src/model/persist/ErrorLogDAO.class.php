@@ -18,6 +18,13 @@ class ErrorLogDAO {
         return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getErrorById($error) {
+        $response = array($error->getErrorId());
+        $sql = "SELECT * FROM error_log WHERE error_log.iderror_log=?;";
+        $response = $this->dbConnect->selectQuery($sql, $response);
+        return $response->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function InsertErrorLog($error) {
         $response = array($error->getError(),$error->getClass(),$error->getFunction());
         $sql = "INSERT INTO error_log  (error,class,function) VALUES(?,?,?);";

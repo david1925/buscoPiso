@@ -20,10 +20,12 @@ $app->get('/errors', function(Request $request, Response $response){
 
 // Get one error
 $app->get('/errors/{id}', function(Request $request, Response $response){
+    $idError = $request->getAttribute("id");
     try{
         $result = "";
+        $error = new ErrorLog($idError,"","","","");
         $errors = new ErrorLogDAO();
-        $result = $errors->getAll();
+        $result = $errors->getErrorById($error);
         echo json_encode($result);
     } catch(PDOException $e){
         echo '{"error": {"text": '.$e->getMessage().'}';

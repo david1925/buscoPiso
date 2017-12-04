@@ -40,3 +40,25 @@
 2017-11-23 12:35:46;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
 >>>>>>> bded20f752970af2fa5af9138b4405a7402dc612
 
+2017-12-02 18:43:37;;;;;;SQLSTATE[42S02]: Base table or view not found: 1146 Table 'buscopiso.flors' doesn't exist;;;;;;El error esta en la clase: FloorsDAO;;;;;;El error esta en la funcion: getAll
+
+2017-12-03 22:27:07;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-03 23:55:39;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 00:03:40;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 00:05:16;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 00:24:30;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 00:25:52;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 00:30:23;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 00:35:21;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 01:07:56;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-04 01:20:18;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+

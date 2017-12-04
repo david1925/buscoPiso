@@ -8289,7 +8289,9 @@ INSERT INTO additional_features (air_conditioner,built_in_wardrobe,elevator,exte
 INSERT INTO additional_features (air_conditioner,built_in_wardrobe,elevator,exterior,parking,garden,pool,storage_room,community_zone,gym,floors_idfloors) VALUES(0,0,0,0,0,0,1,1,1,1,4);
 
 /***************floors_search_users***************/
-INSERT INTO floors_search_users (price,square_meters,bedrooms,type_of_contract_idtype_of_contract,users_users_id_user) VALUES (500,80,1,1,1);
+INSERT INTO floors_search_users (price,square_meters,bedrooms,type_of_contract_idtype_of_contract,provinces_idprovinces,users_users_id_user) VALUES (500,80,1,1,3,1);
+INSERT INTO floors_search_users (price,square_meters,bedrooms,type_of_contract_idtype_of_contract,provinces_idprovinces,users_users_id_user) VALUES (1000,70,4,1,6,1);
+INSERT INTO floors_search_users (price,square_meters,bedrooms,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,provinces_idprovinces,users_users_id_user) VALUES (750,120,5,88,2,6,2);
 
 
 /***************distribution***************/

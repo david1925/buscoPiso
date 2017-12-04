@@ -1,5 +1,5 @@
 (function(){
-  angular.module("buscoPiso").controller("registerFormController", ['$scope', '$http', '$translate', 'Domain', function($scope, $http, $translate, Domain) {
+    angular.module("buscoPiso").controller("registerFormController", ['$scope', '$http', '$translate', 'Domain', 'accessService', function ($scope, $http, $translate, Domain, accessService) {
      
   	 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
@@ -151,13 +151,29 @@ this.selectMunicipality = function (selectedProvince) {
         });
     };
 this.validateRegisterForm = function () {
-      $http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
+      /*$http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
         if(response.data=="true"){
           $http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
           
           });  
         }
-      });
+      });*/
+    /*var promise = accessService.getData(Domain + 'api/public/users/register/',
+        false, "POST", { name: $scope.name, firstname: $scope.firstName, lastname: $scope.lastName, phone: $scope.phone, email: $scope.email, password: $scope.password, repeatPassword: $scope.confirmPassword });
+        });*/
+    var promise = accessService.getData(Domain + "api/public/users/register/",
+        false, "POST", { name: $scope.name, firstname: $scope.firstName, lastname: $scope.lastName, phone: $scope.phone, email: $scope.email, password: $scope.password, repeatPassword: $scope.confirmPassword});
+    console.log(outputData);
+    console.log(outputData[0]);
+			promise.then(function (outputData) {
+				if(outputData[0] === "true") {
+                    alert("Ha funcionado");
+				}
+				else {
+                    alert("No ha funcionado");
+				}
+			});
+
     };
    /*this.validateRegisterForm = function () {
    var getLogData = function() {
