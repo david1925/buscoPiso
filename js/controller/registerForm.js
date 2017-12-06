@@ -150,61 +150,27 @@ this.selectMunicipality = function (selectedProvince) {
             $scope.selectedProvince = selectedProvince;
         });
     };
-this.validateRegisterForm = function () {
-      /*$http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
-        if(response.data=="true"){
-          $http.post(Domain + 'api/public/users/register/', {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}).then(function (response) {
-          
-          });  
+        this.validateRegisterForm = function () {
+    //Llamada de ajax para registrar al usuario en la base de datos.
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: Domain + 'api/public/users/register/',
+        data: {
+            'name': $scope.name,
+            'firstname': $scope.firstName,
+            'lastname': $scope.lastName,
+            'phone': $scope.phone,
+            'email': $scope.email,
+            'password': $scope.password,
+            'repeatPassword': $scope.confirmPassword            
+        },
+        success: function (msg) {
+            alert('wow' + msg);
         }
-      });*/
-    /*var promise = accessService.getData(Domain + 'api/public/users/register/',
-        false, "POST", { name: $scope.name, firstname: $scope.firstName, lastname: $scope.lastName, phone: $scope.phone, email: $scope.email, password: $scope.password, repeatPassword: $scope.confirmPassword });
-        });*/
-    var promise = accessService.getData(Domain + "api/public/users/register/",
-        false, "POST", { name: $scope.name, firstname: $scope.firstName, lastname: $scope.lastName, phone: $scope.phone, email: $scope.email, password: $scope.password, repeatPassword: $scope.confirmPassword});
-    console.log(outputData);
-    console.log(outputData[0]);
-			promise.then(function (outputData) {
-				if(outputData[0] === "true") {
-                    alert("Ha funcionado");
-				}
-				else {
-                    alert("No ha funcionado");
-				}
-			});
+    });
 
     };
-   /*this.validateRegisterForm = function () {
-   var getLogData = function() {
-        return $http({
-            url : Domain + 'api/public/users/register/',
-            method : 'POST',
-            async : false,
-            cache : false,
-            headers : { 'Accept' : 'application/json' , 'Pragma':'no-cache'},
-            params : {"name" : $scope.name, "firstname" : $scope.firstName, "lastname" : $scope.lastName, "phone" : $scope.phone, "email" : $scope.email, "password" : $scope.password, "repeatPassword" : $scope.confirmPassword}
-        }).success(function(data) {
-           // for each log entry in data, populate logEntries
-           // push(new LogEntry( stuff from data ))...
-        });
-      }
-      $.ajax(
-      {
-          type: "POST",
-          async: true,
-          url: Domain + 'api/public/users/register/',
-          data:  "{'name:" + $scope.name + ", 'firstname':" + $scope.firstName + ", 'lastname':" + $scope.lastName + ", 'phone':" + $scope.phone + ",'email':" + $scope.email + ", 'password':" + $scope.password + ",'repeatPassword':" + $scope.confirmPassword + "}",
-          contentType: "application/json; charset=utf-8",
-          dataType: "json",
-          success: function () {
-              alert("Ha funcionado");
-          },
-          error: function (xhr, ajaxOptions, thrownError) {
-              alert(xhr.status + " " + thrownError);
-          }
-      });
-   };*/
   }]);
 /********************************************************************************************************************************************************************/
   angular.module('buscoPiso').directive("locationRegisterFormView", function (){

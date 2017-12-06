@@ -62,3 +62,7 @@
 
 2017-12-04 01:20:18;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
 
+2017-12-06 02:25:16;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-06 02:35:10;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+

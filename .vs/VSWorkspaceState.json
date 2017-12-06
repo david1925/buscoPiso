@@ -2,12 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\api",
+    "\\api\\src",
     "\\api\\src\\model",
+    "\\api\\src\\model\\persist",
     "\\api\\src\\routes",
     "\\js",
     "\\js\\controller",
     "\\views"
   ],
-  "SelectedNode": "\\js\\app.js",
+  "SelectedNode": "\\api\\src\\routes\\users.php",
   "PreviewInSolutionExplorer": false
 }

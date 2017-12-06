@@ -15,7 +15,7 @@ ORDER BY floors_search_users.idfloors_search_users DESC LIMIT 1 INTO provinceId;
 SELECT floors_search_users.idfloors_search_users FROM floors_search_users
 ORDER BY floors_search_users.idfloors_search_users DESC LIMIT 1 INTO floors_search_users;
 
-IF municipalityId IS NOT NULL THEN
+IF OLD.municipalityId <> NEW.municipalityId THEN
     UPDATE floors_search_users
     SET floors_search_users.provinces_idprovinces=(SELECT municipalities.provinces_idprovinces FROM municipalities WHERE municipalities.idmunicipalities=floors_search_users)
     WHERE floors_search_users.idfloors_search_users=floors_search_users;
