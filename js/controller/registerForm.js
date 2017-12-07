@@ -97,16 +97,11 @@ $scope.additionalFeatures = new AdditionalFeatures();
 this.selectState = function () {
 
       switch($scope.selectedState){
-        case "Pisos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Armario empotrado", "Ascensor", "Exterior", "Parking", "Jardín", "Piscina", "Terraza", "Trastero", "Zona comunitaria", "Trastero"]; 
-        break;
-        case "Oficinas": $scope.arrayAdditionalFeatures=["Agua caliente", "Aire acondicionado", "Ascensor", "Calefacción", "Exterior", "Parking", "Seguridad"];
-        break;
-        case "Garages": $scope.arrayAdditionalFeatures=["Plaza de moto", "Puerta automática", "Seguridad"];
-        break;
-        case "Trasteros": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"];
-        break;
-        case "Terrenos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"];
-        break;
+        case "Pisos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Armario empotrado", "Ascensor", "Exterior", "Parking", "Jardín", "Piscina", "Terraza", "Trastero", "Zona comunitaria", "Trastero"]; break;
+        case "Oficinas": $scope.arrayAdditionalFeatures=["Agua caliente", "Aire acondicionado", "Ascensor", "Calefacción", "Exterior", "Parking", "Seguridad"]; break;
+        case "Garages": $scope.arrayAdditionalFeatures=["Plaza de moto", "Puerta automática", "Seguridad"]; break;
+        case "Trasteros": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"]; break;
+        case "Terrenos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"]; break;
       }
 
       $http.get(Domain + 'api/public/estates/features/' + $scope.selectedState).then(function (response) {

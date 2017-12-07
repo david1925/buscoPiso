@@ -1,7 +1,8 @@
 (function(){
   angular.module("buscoPiso").controller("LoginController", ['$scope', '$http', '$translate', 'Domain', '$window', function($scope, $http, $translate, Domain, $window) {
   
-    $scope.registerRoute = Domain + "views/registerForm.html";
+    $scope.register = Domain + "views/registerForm.html";
+    $scope.resetPassword = Domain + "views/resetPassword.html";
 
     this.login = function () {
       $scope.flag;

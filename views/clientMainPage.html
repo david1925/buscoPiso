@@ -24,6 +24,7 @@
     <script src="../js/app.js" type="text/javascript" xml:space="preserve"></script>
     <!-- CONTROLLER -->
     <script src="../js/controller/headerAndFooter.js" type="text/javascript" xml:space="preserve"></script>
+    <script src="../js/controller/clientMainPage.js" type="text/javascript" xml:space="preserve"></script>
 
 	<!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
@@ -32,7 +33,7 @@
     <!-- MONTSERRAT FONT -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">   
 </head>
-<body>
+<body ng-controller="ClientMainPageController as clientMainPageCtrl">
     <div id="header" ng-include="'headerAndFooter.html'"></div>
     <div class="container">
         <ul class="nav nav-tabs">
