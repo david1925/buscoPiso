@@ -40,6 +40,38 @@ $app->post('/users/login/', function(Request $request, Response $response){
     }
 });
 
+// Check if user is logged
+$app->get('/users/login/check', function(Request $request, Response $response){
+  session_start();
+  if(!isset($_SESSION['user'])){
+      echo json_encode(false);
+  }else{
+      echo json_encode(true);
+  }
+});
+
+// Destoys a user session
+$app->get('/users/logout/{id}', function(Request $request, Response $response){
+    $id = $request->getAttribute("id");
+    $sql = "SELECT Users.users_username FROM Users WHERE Users.users_id_user=:id";
+    try{
+        // Get DB Object
+        $db = new db();
+        // Connect
+        $db = $db->connect();
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":id", $id);
+        $stmt->execute();
+        $db = null;
+        session_start();
+        print_r($_SESSION['user']);
+        session_unset();
+        session_destroy();
+    } catch(PDOException $e){
+        echo '{"error": {"text": '.$e->getMessage().'}}';
+    }
+});
+
 //Check if an email exists in bbdd
 $app->post('/users/checkEmailUser/', function(Request $request, Response $response){
     $email = $request->getParam("email");
