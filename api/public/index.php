@@ -17,5 +17,6 @@ require '../src/routes/errors.php';
 require '../src/routes/additionalFeatures.php';
 require '../src/routes/typeOfContract.php';
 require '../src/routes/floors.php';
+require '../src/routes/floorsSearchUsers.php';
 
 $app->run();

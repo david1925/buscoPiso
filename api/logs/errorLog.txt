@@ -66,3 +66,21 @@
 
 2017-12-06 02:35:10;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
 
+2017-12-06 23:49:26;;;;;;SQLSTATE[HY000]: General error: 1300 Invalid utf8 character string: 'use\xA1rs';;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-06 23:57:04;;;;;;SQLSTATE[HY000]: General error: 1300 Invalid utf8 character string: 'use\xA1rs';;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-07 00:01:28;;;;;;SQLSTATE[HY000]: General error: 1300 Invalid utf8 character string: 'use\xA1rs';;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-07 00:01:42;;;;;;SQLSTATE[HY000]: General error: 1300 Invalid utf8 character string: 'use\xA1rs';;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-07 00:05:08;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-08 17:38:40;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-10 01:09:44;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-10 01:10:40;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+
+2017-12-10 01:16:22;;;;;;SQLSTATE[HY000]: General error;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: registerUser
+

@@ -151,7 +151,7 @@ this.selectMunicipality = function (selectedProvince) {
         });
     };
         this.validateRegisterForm = function () {
-    //Llamada de ajax para registrar al usuario en la base de datos.
+    //Llamada de ajax con Jquery para registrar al usuario en la base de datos.
     $.ajax({
         type: 'POST',
         async: false,
@@ -166,10 +166,49 @@ this.selectMunicipality = function (selectedProvince) {
             'repeatPassword': $scope.confirmPassword            
         },
         success: function (msg) {
-            alert('wow' + msg);
+            if (msg == "true") {
+                switch ($scope.selectedState) {
+                    case "Pisos": this.insertIntoFloorsSearchUsers();
+                        break;
+                    case "Oficinas": console.log("Se ha seleccionado pisos");
+                        break;
+                    case "Garages": console.log("Se ha seleccionado pisos");
+                        break;
+                    case "Trasteros": console.log("Se ha seleccionado pisos");
+                        break;
+                    case "Terrenos": console.log("Se ha seleccionado pisos");
+                        break;
+                }
+            } else {
+                alert("Ha ocurrido el siguiente error: " + msg);
+            }
+            
         }
     });
 
+};
+
+this.insertIntoFloorsSearchUsers = function () {
+
+    $.ajax({
+        type: 'POST',
+        async: false,
+        url: Domain + 'api/public/floorsSearchUsers/insert',
+        data: {
+            'price': $scope.price,
+            'squareMeters': $scope.squareMeters,
+            'bedrooms': $scope.rooms,
+            'publicationDate': $scope.publicationDate,
+            'municipalityId': $scope.selectedMunicipality,
+            'conditionId': $scope.conditionId,
+            'typeOfContractId': $scope.selectedTypeOfContract,
+            'provinceId': $scope.selectedProvince,
+            'userId': $scope.userId
+        },
+        success: function (msg) {
+            
+        }
+    });
     };
   }]);
 /********************************************************************************************************************************************************************/

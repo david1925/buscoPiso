@@ -10,6 +10,6 @@
     "\\js\\controller",
     "\\views"
   ],
-  "SelectedNode": "\\api\\src\\routes\\users.php",
+  "SelectedNode": "\\api\\src\\model\\persist\\UsersDAO.class.php",
   "PreviewInSolutionExplorer": false
 }

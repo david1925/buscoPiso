@@ -41,14 +41,14 @@
 
         //SETTERS
         function setFloorsSearchUsersId($floorsSearchUsersId) {$this->floorsSearchUsersId = $floorsSearchUsersId;}
-        function getPrice($price) {$this->price = $price;}
-        function getSquareMeters($squareMeters) {$this->squareMeters = $squareMeters;}
-        function getBedrooms($groupId) {$this->groupId = $bedrooms;}
-        function getPublicationDate($publicationDate) {$this->publicationDate = $publicationDate;}
-        function getAddress($address) {$this->address = $address;}
+        function setPrice($price) {$this->price = $price;}
+        function setSquareMeters($squareMeters) {$this->squareMeters = $squareMeters;}
+        function setBedrooms($groupId) {$this->groupId = $bedrooms;}
+        function setPublicationDate($publicationDate) {$this->publicationDate = $publicationDate;}
+        function setAddress($address) {$this->address = $address;}
         function setMunicipalitiesId($municipalitiesId) {$this->municipalitiesId = $municipalitiesId;}
         function setTypeOfContractId($typeOfContractId) {$this->typeOfContractId = $typeOfContractId;}
         function setFloorConditionsId($floorConditionId) {$this->floorConditionId = $floorConditionId;}
         function setUserId($userId) {$this->userId = $userId;}
     }
-?>c
+?>
