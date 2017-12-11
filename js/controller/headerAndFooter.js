@@ -16,8 +16,8 @@
 
         $http.get(Domain + "api/public/users/login/check")
             .then(function(response) {
-                $scope.isLoged = response.data;
-                if ($scope.isLoged == "true") {
+                $scope.isLogged = response.data;
+                if ($scope.isLogged == "true") {
                     $scope.user = new Users();
                     var userObj = JSON.parse(sessionStorage.userLogged);
                     $scope.user.construct(
