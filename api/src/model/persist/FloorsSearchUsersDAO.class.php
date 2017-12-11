@@ -38,7 +38,8 @@
 
         public function insert($floorsSearchUsers) {
             try {
-                $response = array();
+                $response = array($floorsSearchUsers->getPrice(),$floorsSearchUsers->getSquareMeters(),$floorsSearchUsers->getBedrooms(),$floorsSearchUsers->getMunicipalitiesId(),$floorsSearchUsers->getTypeOfContractId(),$floorsSearchUsers->getProvinceId(),$floorsSearchUsers->getUserId());
+                print_r($response);
                 $sql = "INSERT INTO floors_search_users (price,square_meters,bedrooms,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,provinces_idprovinces,users_users_id_user) VALUES (?,?,?,?,?,?,?);";
                 $response = $this->dbConnect->selectQuery($sql, $response);
                 return $response->fetchAll(PDO::FETCH_ASSOC);

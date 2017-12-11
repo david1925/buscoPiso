@@ -36,6 +36,6 @@
         } else {
             $this->stmt = null;
         }
-        return $this->stmt; //retorna la consulta select o el número de files afectades
+        return $this->stmt;
     }
 }

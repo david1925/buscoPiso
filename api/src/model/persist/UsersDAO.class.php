@@ -62,9 +62,10 @@ class UsersDAO {
     public function registerUser($user) {
         try{
           $response = array($user->getName(),$user->getFirstname(),$user->getLastname(),$user->getEmail(),$user->getPassword(),$user->getPhone());
+          print_r($response);
           $sql = "INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES (?,?,?,?,md5(?),?,'',0,2);";
           $result = $this->dbConnect->selectQuery($sql, $response);
-          return $result->fetchAll(PDO::FETCH_ASSOC);
+          return $result->fetchAll();
         }catch(PDOException $pe){
           try{
               $class = get_class($this);
@@ -118,6 +119,29 @@ class UsersDAO {
             }
         }
     }
-}
 
+
+    public function selectLastInsertedUser() {
+        try{
+            $response = array();
+            $sql = "SELECT * FROM users ORDER BY users.users_id_user DESC LIMIT 1;";
+            $result = $this->dbConnect->selectQuery($sql, $response);
+            return $result->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch(PDOException $pe){
+            try{
+                $class = get_class($this);
+                $function = __FUNCTION__;
+                $error = new ErrorLog("","",$pe->getMessage(),$class,$function);
+                $errorDAO = new ErrorLogDAO();
+                $errorDAO->InsertErrorLog($error);
+            }
+            catch(Exception $e){
+                $errorDAO = new ErrorLogDAO();
+                $errorDAO->WriteLogFile($error);
+            }
+        }
+    }
+
+}
 ?>

@@ -146,7 +146,8 @@ this.selectMunicipality = function (selectedProvince) {
         });
     };
         this.validateRegisterForm = function () {
-    //Llamada de ajax con Jquery para registrar al usuario en la base de datos.
+            //Llamada de ajax con Jquery para registrar al usuario en la base de datos.
+            var me = this;
     $.ajax({
         type: 'POST',
         async: false,
@@ -161,9 +162,10 @@ this.selectMunicipality = function (selectedProvince) {
             'repeatPassword': $scope.confirmPassword            
         },
         success: function (msg) {
+            me.selectLastInsertedUser();
             if (msg == "true") {
                 switch ($scope.selectedState) {
-                    case "Pisos": this.insertIntoFloorsSearchUsers();
+                    case "Pisos": me.insertIntoFloorsSearchUsers($scope.idUser);
                         break;
                     case "Oficinas": console.log("Se ha seleccionado pisos");
                         break;
@@ -182,8 +184,8 @@ this.selectMunicipality = function (selectedProvince) {
     });
 
 };
-
-this.insertIntoFloorsSearchUsers = function () {
+//Insert a row for a floorSearchUsersTable
+this.insertIntoFloorsSearchUsers = function (idUser) {
 
     $.ajax({
         type: 'POST',
@@ -198,13 +200,26 @@ this.insertIntoFloorsSearchUsers = function () {
             'conditionId': $scope.conditionId,
             'typeOfContractId': $scope.selectedTypeOfContract,
             'provinceId': $scope.selectedProvince,
-            'userId': $scope.userId
+            'userId': idUser
         },
         success: function (msg) {
-            
+            alert("El segundo insert ha funcionado");
         }
-    });
-    };
+        });
+
+};
+//Select last inserted user
+this.selectLastInsertedUser = function () {
+            $.ajax({
+                type: 'POST',
+                async: false,
+                url: Domain + 'api/public/users/last',
+                data: {},
+                success: function (msg) {
+                    $scope.idUser = JSON.parse(msg)[0].users_id_user;
+                }
+            });
+        };
   }]);
 /********************************************************************************************************************************************************************/
   angular.module('buscoPiso').directive("locationRegisterFormView", function (){

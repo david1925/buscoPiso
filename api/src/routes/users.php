@@ -144,37 +144,15 @@ $app->post('/users/register/', function(Request $request, Response $response){
     }
 });
 
-// Insert a userSearch
-$app->post('/users/insert/userSearch', function(Request $request, Response $response){
-    $state = $request->getParam("state");
-    $email = $request->getParam("email");
+//Select last user inserted in db
+$app->post('/users/last', function(Request $request, Response $response){
     try{
-        switch($state){
-          case "Pisos":
-            $price = $request->getParam("price");
-            $squareMeters = $request->getParam("squareMeters");
-            $bedrooms = $request->getParam("bedrooms");
-            $publicationDate = $request->getParam("publicationDate");
-            $municipalities = $request->getParam("municipalities");
-            $floorCondition = $request->getParam("floorConditions");
-            $contract = $request->getParam("contract");
-            $province = $request->getParam("province");
-              //$floor = new Floors("");
-            break;
-          case "Oficinas":
-            echo "Se ha seleccionado oficinas";
-            break;
-          case "Garages":
-            echo "Se ha seleccionado garages";
-            break;
-          case "Trasteros":
-            echo "Se ha seleccionado trasteros";
-            break;
-          case "Terrenos":
-            echo "Se ha seleccionado terrenos";
-            break;
-        }
-    } catch(PDOException $e){
+        $result = "";       
+        $helper = new UsersDAO();
+        $result = $helper->selectLastInsertedUser();
+        echo json_encode($result);
+    }
+    catch(PDOException $e){
         echo '{"error": {"text": '.$e->getMessage().'}}';
     }
 });
