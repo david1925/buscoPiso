@@ -13,6 +13,7 @@
                         userObj.users_firstname,
                         userObj.users_lastname,
                         userObj.users_email,
+                        userObj.users_password,
                         userObj.users_phone,
                         userObj.floor_description,
                         userObj.state,
