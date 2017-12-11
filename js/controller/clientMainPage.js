@@ -3,8 +3,8 @@
 
         $http.get(Domain + "api/public/users/login/check")
             .then(function(response) {
-                $scope.isLoged = response.data;
-                if ($scope.isLoged == "true") {
+                $scope.isLogged = response.data;
+                if ($scope.isLogged == "true") {
                     $scope.user = new Users();
                     var userObj = JSON.parse(sessionStorage.userLogged);
                     $scope.user.construct(
@@ -13,7 +13,6 @@
                         userObj.users_firstname,
                         userObj.users_lastname,
                         userObj.users_email,
-                        userObj.users_password,
                         userObj.users_phone,
                         userObj.floor_description,
                         userObj.state,

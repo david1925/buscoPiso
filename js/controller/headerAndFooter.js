@@ -9,9 +9,9 @@
         $scope.faq      = Domain + "views/faq.html";
 
         if (sessionStorage.userLogged != null) {
-            $scope.isLogged = 1;
+            $scope.showLoginButton = 1;
         } else {
-            $scope.isLogged = 0;
+            $scope.showLoginButton = 0;
         }
 
         $http.get(Domain + "api/public/users/login/check")
@@ -56,7 +56,7 @@
                 userObj.business_office_idoffice,
                 userObj.additional_features_users_idadditional_features_users
             );            
-            $http.get(Domain + "api/public/users/logout/" + $scope.user.getUserId())
+            $http.get(Domain + "api/public/users/logout/" + $scope.user.getEmail())
                 .then(function(response) {
                     $scope.users = response.data;
                 }
