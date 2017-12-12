@@ -4,6 +4,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 require_once "../src/model/Users.class.php";
 require_once "../src/model/Floors.class.php";
+require_once "../src/model/FloorsSearchUsers.class.php";
 require_once "../src/model/persist/UsersDAO.class.php";
 require_once "../src/model/persist/FloorsSearchUsersDAO.class.php";
 
@@ -12,10 +13,25 @@ require_once "../src/model/persist/FloorsSearchUsersDAO.class.php";
 $app->get('/floorsSearchUsers', function(Request $request, Response $response){
     try{
         $result = "";
-        $users = new FloorsSearchUsersDAO();
-        $result = $users->getAll();
+        $helper = new FloorsSearchUsersDAO();
+        $result = $helper->getAll();
         echo json_encode($result);
     } catch(PDOException $e){
+        echo '{"error": {"text": '.$e->getMessage().'}';
+    }
+});
+
+// Get one row from floorsSearchUsers by id
+$app->get('/floorsSearchUsers/{id}', function(Request $request, Response $response){
+    $idFloorsSearchUsers= $request->getAttribute("id");
+    try{
+        $floorsSearchUsers = new FloorsSearchUsers($idFloorsSearchUsers,"","","","","","","","","","");
+        $result = "";
+        $helper = new FloorsSearchUsersDAO();
+        $result = $helper->getFloorsSearchUsersById($floorsSearchUsers);
+        echo json_encode($result);
+    }
+    catch(PDOException $e){
         echo '{"error": {"text": '.$e->getMessage().'}';
     }
 });
@@ -31,23 +47,6 @@ $app->post('/floorsSearchUsers/insert', function(Request $request, Response $res
     $typeOfContractId = $request->getParam("typeOfContractId");
     $provinceId = $request->getParam("provinceId");
     $userId = $request->getParam("userId");
-    /*echo $price;
-    echo "<br/>";
-    echo $squareMeters;
-    echo "<br/>";
-    echo $bedrooms;
-    echo "<br/>";
-    echo $publicationDate;
-    echo "<br/>";
-    echo $municipalityId;
-    echo "<br/>";
-    echo $conditionId;
-    echo "<br/>";
-    echo $typeOfContractId;
-    echo "<br/>";
-    echo $provinceId;
-    echo "<br/>";
-    echo $userId;*/
     try{
         $result = "";
         $floorsSearchUsers = new FloorsSearchUsers("",$price,$squareMeters,$bedrooms,$publicationDate,"",$municipalityId,$provinceId,$conditionId,$typeOfContractId,$userId);

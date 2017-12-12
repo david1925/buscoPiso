@@ -65,7 +65,7 @@ class UsersDAO {
           print_r($response);
           $sql = "INSERT INTO users (users_name,users_firstname,users_lastname,users_email,users_password,users_phone,floor_description,state,groups_groups_id_group) VALUES (?,?,?,?,md5(?),?,'',0,2);";
           $result = $this->dbConnect->selectQuery($sql, $response);
-          return $result->fetchAll();
+          return $result;
         }catch(PDOException $pe){
           try{
               $class = get_class($this);

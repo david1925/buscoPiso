@@ -16,7 +16,7 @@
 
         //CONSTRUCT
         function __construct($floorsSearchUsersId, $price, $squareMeters, $bedrooms, $publicationDate, $address, $municipalitiesId, $provinceId, $floorConditionsId, $typeOfContractId, $userId) {
-            $this->floorSearchUsersId = $floorsSearchUsersId;
+            $this->floorsSearchUsersId = $floorsSearchUsersId;
             $this->price = $price;
             $this->squareMeters = $squareMeters;
             $this->bedrooms = $bedrooms;
