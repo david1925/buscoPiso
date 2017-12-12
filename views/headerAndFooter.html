@@ -19,7 +19,9 @@
                             <li><a href="{{faq}}">FAQ</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{login}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <!-- <li><a href="{{login}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+                            <li><a href="{{login}}" ng-if="showLoginButton==0" translate="Login"></a></li>
+                            <li><a href="{{index}}" ng-if="showLoginButton==1" translate="Logout" ng-click="headerAndFooterCtrl.logOut()"></a></li>
                         </ul>
                     </div>
                 </div>
