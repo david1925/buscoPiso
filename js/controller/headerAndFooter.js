@@ -56,7 +56,7 @@
                 userObj.business_office_idoffice,
                 userObj.additional_features_users_idadditional_features_users
             );            
-            $http.get(Domain + "api/public/users/logout/" + $scope.user.getEmail())
+            $http.get(Domain + "api/public/users/logout/" + $scope.user.getUserId())
                 .then(function(response) {
                     $scope.users = response.data;
                 }
