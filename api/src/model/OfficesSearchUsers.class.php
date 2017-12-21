@@ -1,4 +1,4 @@
-<?php    
+<?php
     class OfficesSearchUsers {
         var $officeSearchUsersId;
         var $price;
@@ -12,9 +12,10 @@
         var $officeFeaturesId;
         var $municipalitiesId;
         var $typeOfContractId;
+        var $provinceId;
         var $userId;
-        
-        function __construct($officeSearchUsersId, $price, $squareMeters, $publicationDate, $address, $local, $warehouse, $distributionId, $typeOfBuildingId, $officeFeaturesId, $municipalitiesId, $typeOfContractId, $userId) {
+
+        function __construct($officeSearchUsersId, $price, $squareMeters, $publicationDate, $address, $local, $warehouse, $distributionId, $typeOfBuildingId, $officeFeaturesId, $municipalitiesId, $typeOfContractId, $provinceId, $userId) {
             $this->officeSearchUsersId = $officeSearchUsersId;
             $this->price = $price;
             $this->squareMeters = $squareMeters;
@@ -27,6 +28,7 @@
             $this->officeFeaturesId = $officeFeaturesId;
             $this->municipalitiesId = $municipalitiesId;
             $this->typeOfContractId = $typeOfContractId;
+            $this->provinceId = $provinceId;
             $this->userId = $userId;
         }
 
@@ -42,6 +44,7 @@
         function getOfficeFeaturesId() {return $this->officeFeaturesId;}
         function getMunicipalitiesId() {return $this->municipalitiesId;}
         function getTypeOfContractId() {return $this->typeOfContractId;}
+        function getProvinceId() {return $this->provinceId;}
         function getUserId() {return $this->userId;}
 
         function setOfficeSearchUsersId($officeSearchUsersId) {$this->officeSearchUsersId = $officeSearchUsersId;}
@@ -56,6 +59,7 @@
         function setOfficeFeaturesId($officeFeaturesId) {$this->officeFeaturesId = $officeFeaturesId;}
         function setMunicipalitiesId($municipalitiesId) {$this->municipalitiesId = $municipalitiesId;}
         function setTypeOfContractId($typeOfContractId) {$this->typeOfContractId = $typeOfContractId;}
+        function setProvinceId($provinceId) {$this->provinceId = $provinceId;}
         function setUserId($userId) {$this->userId = $userId;}
     }
 ?>

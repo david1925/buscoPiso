@@ -8,7 +8,6 @@
     "\\api\\src\\model\\persist",
     "\\api\\src\\routes",
     "\\DataBase",
-    "\\js\\controller",
     "\\views"
   ],
   "SelectedNode": "\\api\\src\\model\\persist\\UsersDAO.class.php",

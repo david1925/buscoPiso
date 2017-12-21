@@ -19,5 +19,6 @@ require '../src/routes/typeOfContract.php';
 require '../src/routes/floors.php';
 require '../src/routes/floorsSearchUsers.php';
 require '../src/routes/officesSearchUsers.php';
+require '../src/routes/garagesSearchUsers.php';
 
 $app->run();
