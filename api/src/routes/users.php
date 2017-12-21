@@ -51,16 +51,16 @@ $app->get('/users/login/check', function(Request $request, Response $response){
 });
 
 // Destoys a user session
-$app->get('/users/logout/{email}', function(Request $request, Response $response){
-    $email = $request->getAttribute("email");
-    $sql = "SELECT users_email FROM users WHERE users_email=:email";
+$app->get('/users/logout/{id}', function(Request $request, Response $response){
+    $id  = $request->getAttribute("id");
+    $sql = "SELECT users_id_user FROM users WHERE users_id_user=:id";
     try{
         // Get DB Object
         $db = new db();
         // Connect
         $db = $db->connect();
         $stmt = $db->prepare($sql);
-        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":id", $id);
         $stmt->execute();
         $db = null;
         session_start();
