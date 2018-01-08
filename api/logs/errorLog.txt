@@ -174,3 +174,9 @@
 
 2017-12-21 03:21:29;;;;;;SQLSTATE[42S22]: Column not found: 1054 Unknown column 'garages_search_users.idgarages_search_users' in 'where clause';;;;;;El error esta en la clase: GaragesSearchUsersDAO;;;;;;El error esta en la funcion: getGaragesSearchUsersById
 
+2018-01-08 00:48:39;;;;;;SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens;;;;;;El error esta en la clase: GaragesSearchUsersDAO;;;;;;El error esta en la funcion: insert
+
+2018-01-08 00:58:12;;;;;;SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens;;;;;;El error esta en la clase: GaragesSearchUsersDAO;;;;;;El error esta en la funcion: insert
+
+2018-01-08 01:16:25;;;;;;SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'garages_features_idgarages_features' at row 1;;;;;;El error esta en la clase: GaragesSearchUsersDAO;;;;;;El error esta en la funcion: insert
+

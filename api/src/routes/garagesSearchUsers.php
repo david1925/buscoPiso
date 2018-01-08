@@ -35,27 +35,22 @@ $app->get('/garagesSearchUsers/{id}', function(Request $request, Response $respo
     }
 });
 
-// Insert into officesSearchUsers
-/*$app->post('/officesSearchUsers/insert', function(Request $request, Response $response){
+// Insert into garagesSearchUsers
+$app->post('/garagesSearchUsers/insert', function(Request $request, Response $response){
     $price = $request->getParam("price");
-    $squareMeters = $request->getParam("squareMeters");
     $publicationDate = $request->getParam("publicationDate");
-    $address = $request->getParam("address");
-    $local = $request->getParam("local");
-    $warehouse = $request->getParam("warehouse");
-    $distributionId= $request->getParam("distributionId");
-    $buildingType = $request->getParam("buildingType");
-    $officesFeaturesId = $request->getParam("officesFeaturesId");
+    $garagesFeaturesId = $request->getParam("garagesFeaturesId");
     $municipalityId = $request->getParam("municipalityId");
     $typeOfContractId = $request->getParam("typeOfContractId");
     $provinceId = $request->getParam("provinceId");
     $userId = $request->getParam("userId");
-        //$publicationDate = NULL;
     try{
         $result = "";
-        $officesSearchUsers = new OfficesSearchUsers("",$price,$squareMeters,$publicationDate,$address,$local,$warehouse,$distributionId,$buildingType,$officesFeaturesId,$municipalityId,$typeOfContractId,$provinceId,$userId);
-        $helper= new OfficesSearchUsersDAO();
-        $result = $helper->insert($officesSearchUsers);
+        $garagesSearchUsers = new GaragesSearchUsers("",$price,$publicationDate,$garagesFeaturesId,$typeOfContractId,$municipalityId,$provinceId, $userId);
+        echo "Este es el objeto que se crea: "; 
+        var_dump($garagesSearchUsers);
+        $helper= new GaragesSearchUsersDAO();
+        $result = $helper->insert($garagesSearchUsers);
         if($result){
             echo "true";
         }else{
@@ -65,4 +60,4 @@ $app->get('/garagesSearchUsers/{id}', function(Request $request, Response $respo
     catch(PDOException $e){
         echo '{"error": {"text": '.$e->getMessage().'}';
     }
-});*/
+});

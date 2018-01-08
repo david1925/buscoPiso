@@ -10,6 +10,6 @@
     "\\DataBase",
     "\\views"
   ],
-  "SelectedNode": "\\api\\src\\model\\persist\\UsersDAO.class.php",
+  "SelectedNode": "\\api\\src\\routes\\garagesSearchUsers.php",
   "PreviewInSolutionExplorer": false
 }

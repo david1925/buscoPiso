@@ -59,6 +59,32 @@
                 }
             }
         }
+
+
+        //Insert a row in garagesSearchUser
+        public function insert($garagesSearchUsers) {
+            try {
+                $response = array($garagesSearchUsers->getPrice(),$garagesSearchUsers->getPublicationDate(),NULL,$garagesSearchUsers->getTypeOfContractId(),$garagesSearchUsers->getMunicipalityId(),$garagesSearchUsers->getProvinceId(),$garagesSearchUsers->getUserId());
+                print_r($response);
+                $sql = "INSERT INTO garages_search_users (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,provinces_idprovinces,users_users_id_user) VALUES (?,?,?,?,?,?,?);";
+                $response = $this->dbConnect->selectQuery($sql, $response);
+                return $response;
+                //echo "Hasta el DAO se llega";
+            }
+            catch(PDOException $pe){
+                try{
+                    $class = get_class($this);
+                    $function = __FUNCTION__;
+                    $error = new ErrorLog("","",$pe->getMessage(),$class,$function);
+                    $errorDAO = new ErrorLogDAO();
+                    $errorDAO->InsertErrorLog($error);
+                }
+                catch (Exception $e){
+                    $errorDAO = new ErrorLogDAO();
+                    $errorDAO->WriteLogFile($error);
+                }
+            }
+        }
     }
 
 ?>
