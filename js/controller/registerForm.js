@@ -85,7 +85,7 @@ $scope.regularExpressionPhone = "Prueba de variable de angular";
 $scope.passwordValidation = false;
 $scope.password="";
 $scope.repeatPassword="";
-$scope.stateType= ["Pisos", "Oficinas", "Garages", "Trasteros", "Terrenos"];
+$scope.stateType= ["Pisos", "Oficinas", "Garages", "Locales", "Trasteros", "Terrenos"];
 $scope.arrayAutonomousCommunities=[];
 $scope.arrayAdditionalFeatures=[];
 $scope.arrayTypeOfContract=[];
@@ -99,7 +99,8 @@ this.selectState = function () {
       switch($scope.selectedState){
         case "Pisos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Armario empotrado", "Ascensor", "Exterior", "Parking", "Jardín", "Piscina", "Terraza", "Trastero", "Zona comunitaria", "Trastero"]; break;
         case "Oficinas": $scope.arrayAdditionalFeatures=["Agua caliente", "Aire acondicionado", "Ascensor", "Calefacción", "Exterior", "Parking", "Seguridad"]; break;
-        case "Garages": $scope.arrayAdditionalFeatures=["Plaza de moto", "Puerta automática", "Seguridad"]; break;
+        case "Garages": $scope.arrayAdditionalFeatures = ["Plaza de moto", "Puerta automática", "Seguridad"]; break;
+        case "Locales": $scope.arrayAdditionalFeatures = ["Aire acondicionado", "Calefacción", "Esquina", "Salida de humos"]; break;
         case "Trasteros": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"]; break;
         case "Terrenos": $scope.arrayAdditionalFeatures=["Aire acondicionado", "Calefacción", "Esquinero", "Salida de humos"]; break;
       }

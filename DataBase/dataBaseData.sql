@@ -8304,17 +8304,11 @@ INSERT INTO type_of_building (name) VALUES ("Indiferente");
 INSERT INTO type_of_building (name) VALUES ("Exclusivo oficinas");
 INSERT INTO type_of_building (name) VALUES ("Uso mixto");
 
-/***************office_features***************/
-INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (1,1,1,1,1,1,1);
-INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (0,0,0,0,0,0,0);
-INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (0,0,0,0,0,1,1);
-INSERT INTO office_features (hot_water,air_conditioner,elevator,heating,exterior,garage,security) VALUES (1,1,1,1,1,0,0);
-
 /***************offices***************/
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 33",1,1,1,1,1,4254,1,2);
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Falsa 123 89",0,2,2,1,1,4000,2,2);
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",1,3,3,1,1,4500,3,2);
-INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,office_features_idoffice_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",0,2,1,1,1,4700,4,18);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 33",1,1,1,1,4254,1,2);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Falsa 123 89",0,2,2,1,4000,2,2);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",1,3,3,1,4500,3,2);
+INSERT INTO offices (price,square_meters,publication_date,address,local,warehouse,distribution_iddistribution,type_of_building_idtype_of_building,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES(2500,500,date(now()),"Rodés 44 6º 1ª",0,2,1,1,4700,4,18);
 
 /***************floors_users***************/
 INSERT INTO floors_users(users_users_id_user,floors_idfloors) VALUES (4,1);
@@ -8361,16 +8355,16 @@ INSERT INTO offices_images (name,offices_idoffices) VALUES ("office3.jpg",3);
 INSERT INTO offices_images (name,offices_idoffices) VALUES ("office4.jpg",4);
 
 /***************location***************/
-INSERT INTO location (mall,street_level,mezzanine,underground,others) values (true,true,true,true,true);
-INSERT INTO location (mall,street_level,mezzanine,underground,others) values (true,true,false,true,false);
-INSERT INTO location (mall,street_level,mezzanine,underground,others) values (false,false,true,true,true);
-INSERT INTO location (mall,street_level,mezzanine,underground,others) values (false,false,false,false,false);
+INSERT INTO location (name) values ("Centro comercial");
+INSERT INTO location (name) values ("Entresuelo");
+INSERT INTO location (name) values ("Subterráneo");
+INSERT INTO location (name) values ("Otros");
 
 /***************additional_features_users***************/
-INSERT INTO additional_features_users (description,courses,status,work_position) VALUES ('Soy nuevo', 'Doctorado', true, 'Freelancer');
-INSERT INTO additional_features_users (description,courses,status,work_position) VALUES ('etc', 'FP', true, 'Freelancer');
-INSERT INTO additional_features_users (description,courses,status,work_position) VALUES ('Llevo 20 años en el negocio', 'FP marketing', true, 'Vendedor');
-INSERT INTO additional_features_users (description,courses,status,work_position) VALUES ('Llevo 10 años en el negocio', 'Ingeniero aeronautico', true, 'Boss');
+INSERT INTO additional_features_users (description,courses,work_position) VALUES ('Soy nuevo', 'Doctorado','Freelancer');
+INSERT INTO additional_features_users (description,courses,work_position) VALUES ('etc', 'FP', 'Freelancer');
+INSERT INTO additional_features_users (description,courses,work_position) VALUES ('Llevo 20 años en el negocio', 'FP marketing', 'Vendedor');
+INSERT INTO additional_features_users (description,courses,work_position) VALUES ('Llevo 10 años en el negocio', 'Ingeniero aeronautico', 'Boss');
 
 /***************payment_methods***************/
 INSERT INTO payment_methods (name) VALUES ('Paypal');
@@ -8378,17 +8372,11 @@ INSERT INTO payment_methods (name) VALUES ('creditCard');
 INSERT INTO payment_methods (name) VALUES ('Dunno');
 INSERT INTO payment_methods (name) VALUES ('Dunno2');
 
-/***************locals_warehouses_features***************/
-INSERT INTO locals_warehouses_features (air_conditioner,heating,corner,smoke_outlet) VALUES (true,true,true,true);
-INSERT INTO locals_warehouses_features (air_conditioner,heating,corner,smoke_outlet) VALUES (false,false,true,true);
-INSERT INTO locals_warehouses_features (air_conditioner,heating,corner,smoke_outlet) VALUES (false,true,false,true);
-INSERT INTO locals_warehouses_features (air_conditioner,heating,corner,smoke_outlet) VALUES (false,false,false,false);
-
 /***************locals_warehouses***************/
-INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (2625,831,date(now()),1,1,1,1,1);
-INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (654,47,date(now()),1,2,2,1,1);
-INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (45645,8871,date(now()),1,1,2,1,2);
-INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (23545,89,date(now()),1,2,1,2,1);
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (2625,831,date(now()),1,1,1,1);
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (654,47,date(now()),1,2,1,1);
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (45645,8871,date(now()),1,2,1,2);
+INSERT INTO locals_warehouses (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (23545,89,date(now()),1,1,2,1);
 
 /***************locals_warehouses_users***************/
 INSERT INTO locals_warehouses_users (locals_warehouses_idlocals_warehouses,users_users_id_user) VALUES (1,1);
@@ -8403,16 +8391,8 @@ INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno', 2);
 INSERT INTO payment_type (name,number_of_users) VALUES ('Dunno2', 3);
 
 /***************land_type***************/
-INSERT INTO land_type (urban,urbanizable) VALUES (true,true);
-INSERT INTO land_type (urban,urbanizable) VALUES (true,false);
-INSERT INTO land_type (urban,urbanizable) VALUES (false,true);
-INSERT INTO land_type (urban,urbanizable) VALUES (false,false);
-
-/***************garages_features***************/
-INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (true,true,true);
-INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (false,true,false);
-INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (true,false,true);
-INSERT INTO garages_features (motorcycle_seat,automatic_door,security) VALUES (false,false,false);
+INSERT INTO land_type (name) VALUES ("Urbano");
+INSERT INTO land_type (name) VALUES ("Urbanizable");
 
 /***************offices_users***************/
 INSERT INTO offices_users (users_users_id_user,offices_idoffices) VALUES (1,1);
@@ -8421,16 +8401,16 @@ INSERT INTO offices_users (users_users_id_user,offices_idoffices) VALUES (2,1);
 INSERT INTO offices_users (users_users_id_user,offices_idoffices) VALUES (2,2);
 
 /***************garages_search_users***************/
-INSERT INTO garages_search_users (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (10000,date(now()),1,1,2,1,5);
-INSERT INTO garages_search_users (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (20000,date(now()),2,1,1,1,6);
-INSERT INTO garages_search_users (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (30000,date(now()),1,2,1,1,9);
-INSERT INTO garages_search_users (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (40000,date(now()),1,2,1,1,20);
+INSERT INTO garages_search_users (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (10000,date(now()),1,2,1,5);
+INSERT INTO garages_search_users (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (20000,date(now()),1,1,1,6);
+INSERT INTO garages_search_users (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (30000,date(now()),2,1,1,9);
+INSERT INTO garages_search_users (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,users_users_id_user,provinces_idprovinces) VALUES (40000,date(now()),2,1,1,20);
 
 /***************garages***************/
-INSERT INTO garages (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (10000,Date(now()),1,2,1,1);
-INSERT INTO garages (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (20000,Date(now()),1,1,2,1);
-INSERT INTO garages (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (30000,Date(now()),1,2,1,1);
-INSERT INTO garages (price,publication_date,garages_features_idgarages_features,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (40000,Date(now()),1,1,2,2);
+INSERT INTO garages (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (10000,Date(now()),1,2,1);
+INSERT INTO garages (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (20000,Date(now()),1,2,1);
+INSERT INTO garages (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (30000,Date(now()),2,1,1);
+INSERT INTO garages (price,publication_date,type_of_contract_idtype_of_contract,municipalities_idmunicipalities,road_types_roadType_id_roadType) VALUES (40000,Date(now()),1,2,2);
 
 /***************payments***************/
 INSERT INTO payments (payment_date,date_of_expiry,price,iva,users_users_id_user,business_office_idoffice,payment_type_idpayment_type,payment_methods_idpayment_methods) VALUES (date(now()),date(now()),2000,21,1,1,1,1);
@@ -8445,10 +8425,10 @@ INSERT INTO lands_search_users (price,square_meters,land_type_idland_type,munici
 INSERT INTO lands_search_users (price,square_meters,land_type_idland_type,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (2323,834,1,2,1,1,13);
 
 /***************locals_warehouses_search_users***************/
-INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (1234,1,date(now()),1,1,1,1,1,11);
-INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (35567,34,date(now()),1,2,2,1,1,12);
-INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (4635776,765,date(now()),1,1,1,2,1,13);
-INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,locals_warehouses_features_idlocals_warehouses_features,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (54645,46,date(now()),1,2,1,2,1,14);
+INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (1234,1,date(now()),1,1,1,1,11);
+INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (35567,34,date(now()),1,2,1,1,12);
+INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (4635776,765,date(now()),1,1,2,1,13);
+INSERT INTO locals_warehouses_search_users (price,square_meters,publication_date,location_idlocation,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,users_users_id_user,provinces_idprovinces) VALUES (54645,46,date(now()),1,1,2,1,14);
 
 /***************lands***************/
 INSERT INTO lands (price,square_meters,land_type_idland_type,municipalities_idmunicipalities,type_of_contract_idtype_of_contract,road_types_roadType_id_roadType) VALUES (34531,46,2,1,1,1);

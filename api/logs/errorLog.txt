@@ -180,3 +180,5 @@
 
 2018-01-08 01:16:25;;;;;;SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'garages_features_idgarages_features' at row 1;;;;;;El error esta en la clase: GaragesSearchUsersDAO;;;;;;El error esta en la funcion: insert
 
+2018-01-14 15:52:52;;;;;;SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1;;;;;;El error esta en la clase: FloorsDAO;;;;;;El error esta en la funcion: getFeatures
+

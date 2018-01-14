@@ -8,8 +8,9 @@
     "\\api\\src\\model\\persist",
     "\\api\\src\\routes",
     "\\DataBase",
-    "\\views"
+    "\\js",
+    "\\js\\controller"
   ],
-  "SelectedNode": "\\api\\src\\routes\\garagesSearchUsers.php",
+  "SelectedNode": "\\DataBase\\dataBaseData.sql",
   "PreviewInSolutionExplorer": false
 }
