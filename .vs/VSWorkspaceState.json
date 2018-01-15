@@ -5,12 +5,11 @@
     "\\api\\public",
     "\\api\\src",
     "\\api\\src\\model",
-    "\\api\\src\\model\\persist",
     "\\api\\src\\routes",
     "\\DataBase",
     "\\js",
     "\\js\\controller"
   ],
-  "SelectedNode": "\\DataBase\\dataBaseData.sql",
+  "SelectedNode": "\\api\\src\\model\\Floors.class.php",
   "PreviewInSolutionExplorer": false
 }
