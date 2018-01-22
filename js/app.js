@@ -1,9 +1,9 @@
 
 (function(){
- angular.module("buscoPiso",["pascalprecht.translate",'angularUtils.directives.dirPagination']);
+    angular.module("buscoPiso", ["pascalprecht.translate", 'angularUtils.directives.dirPagination', 'satellizer']);
 
 
-   angular.module("buscoPiso").config(['$translateProvider', function ($translateProvider) {
+    angular.module("buscoPiso").config(['$translateProvider', '$authProvider', function ($translateProvider, $authProvider) {
   $translateProvider.translations("en", {
     /***** LOGIN *****/
     "Incorrect email or password": "Incorrect email or password",
@@ -170,6 +170,11 @@
 
     $translateProvider.preferredLanguage(localStorage.getItem("language"));
     $translateProvider.useSanitizeValueStrategy("escapeParameters"); 
+    //Config parameters
+    /*$authProvider.loginUrl = "http://www.buscopiso.local/users/login/";
+    $authProvider.signupUrl = "http://www.buscopiso.local/users/register/";
+    $authProvider.tokenName = "buscoPisoToken";
+    $authProvider.tokenPrefix = "prefix";*/
 }]);
 
     angular.module("buscoPiso").factory('Domain', function(){

@@ -3,13 +3,12 @@
     "",
     "\\api",
     "\\api\\public",
-    "\\api\\src",
     "\\api\\src\\model",
     "\\api\\src\\routes",
     "\\DataBase",
     "\\js",
-    "\\js\\controller"
+    "\\views"
   ],
-  "SelectedNode": "\\api\\src\\model\\Floors.class.php",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }

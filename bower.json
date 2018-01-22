@@ -1,0 +1,21 @@
+{
+  "name": "buscoPiso",
+  "homepage": "https://github.com/david1925/buscoPiso",
+  "authors": [
+    "david1925 <david.gargom.94@gmail.com>"
+  ],
+  "description": "buscoPiso Web",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "satellizer": "^0.15.5"
+  }
+}
