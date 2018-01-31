@@ -35,10 +35,10 @@
         function setPrice($price) {$this->price = $price;}
         function setPublicationDate($publicationDate) {$this->publicationDate = $publicationDate;}
         function setGaragesFeaturesId($motorcycleSeat) {$this->motorcycleSeat = $motorcycleSeat;}
-        function setGaragesFeaturesId($automaticDoor) {$this->automaticDoor = $automaticDoor;}
-        function setGaragesFeaturesId($security) {$this->security = $security;}
+        function setAutomaticDoor($automaticDoor) {$this->automaticDoor = $automaticDoor;}
+        function setSecurity($security) {$this->security = $security;}
         function setTypeOfContractId($typeOfContractId) {$this->typeOfContractId = $typeOfContractId;}
         function setMunicipalitiesId($municipalitiesId) {$this->municipalitiesId = $municipalitiesId;}
-        function setGaragesFeaturesId($roadTypeId) {$this->roadTypeId = $roadTypeId;}
+        function setRoadTypeId($roadTypeId) {$this->roadTypeId = $roadTypeId;}
     }
 ?>

@@ -1,11 +1,11 @@
 <?php    
     class Location {
         var $locationId;
-        var $name
+        var $name;
         
         function __construct($locationId, $name) {
             $this->locationId = $locationId;
-            $this->name = $name
+            $this->name = $name;
         }
 
         function getLocationId() {return $this->locationId;}

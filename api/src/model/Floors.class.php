@@ -78,13 +78,13 @@
         function setPublicationDate($publicationDate) {$this->publicationDate = $publicationDate;}
         function setAddress($address) {$this->address = $address;}
         function setAirConditioner($airConditioner) {$this->airConditioner = $airConditioner;}
-        function setAddress($builtInWardrobe) {$this->builtInWardrobe = $builtInWardrobe;}
+        function setBuiltInWardrobe($builtInWardrobe) {$this->builtInWardrobe = $builtInWardrobe;}
         function setElevator($elevator) {$this->elevator = $elevator;}
         function setExterior($exterior) {$this->exterior = $exterior;}
         function setParking($parking) {$this->parking = $parking;}
-        function setAddress($garden) {$this->garden = $garden;}
+        function setGarden($garden) {$this->garden = $garden;}
         function setPool($pool) {$this->pool = $pool;}
-        function setAddress($storageRoom) {$this->storageRoom = $storageRoom;}
+        function setStorageRoom($storageRoom) {$this->storageRoom = $storageRoom;}
         function setCommunityZone($communityZone) {$this->communityZone = $communityZone;}
         function setGym($gym) {$this->gym = $gym;}
         function setIdMunicipalities($idMunicipalities) {$this->idMunicipalities = $idMunicipalities;}

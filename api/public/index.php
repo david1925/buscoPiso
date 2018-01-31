@@ -35,5 +35,6 @@ require_once __DIR__ . '/../src/model/persist/db.php';
 require_once __DIR__ . '/../src/model/Users.class.php';
 require_once __DIR__ . '/../src/model/Floors.class.php';
 require_once __DIR__ . '/../src/model/persist/UsersDAO.class.php';
+require_once __DIR__ . '/../src/model/persist/FloorsDAO.class.php';
 // Run app
 $app->run();

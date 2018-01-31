@@ -6,3 +6,4 @@ use \Interop\Container\ContainerInterface as ContainerInterface;
 
 
 require __DIR__ . '/../src/routes/users.php';
+require __DIR__ . '/../src/routes/floors.php';
