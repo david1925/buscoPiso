@@ -1,5 +1,5 @@
 (function(){
-  angular.module("buscoPiso").controller("LoginController", ['$scope', '$http', '$translate', 'Domain', '$window', function($scope, $http, $translate, Domain, $window) {
+    angular.module("buscoPiso").controller("LoginController", ['$scope', '$http', '$translate', 'Domain', '$window', function ($scope, $http, $translate, Domain, $window, $auth) {
   
     $scope.register = Domain + "views/registerForm.html";
     $scope.resetPassword = Domain + "views/resetPassword.html";

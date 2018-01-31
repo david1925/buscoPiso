@@ -3,7 +3,7 @@
 
         //PROPERTIES
         var $countriesId;
-        var $name
+        var $name;
 
         //CONSTRUCT
         function __construct($countriesId, $name) {
