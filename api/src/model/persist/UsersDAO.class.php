@@ -33,7 +33,7 @@ class UsersDAO {
             $user->getPassword()
         );
         $sql = "SELECT users_id_user, users_name, users_firstname, users_lastname, users_email,
-                       users_password, users_phone, floor_description, state, last_login, groups_groups_id_group,
+                       users_phone, floor_description, state, last_login, groups_groups_id_group,
                        business_office_idoffice, additional_features_users_idadditional_features_users
                 FROM users
                 WHERE users_email    = ?

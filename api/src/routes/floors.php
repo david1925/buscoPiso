@@ -6,19 +6,19 @@ $app->group('/floors/', function () {
     $this->get('', function ($req, $res, $args) {
                    try{
                         $result = "";
-                        $provinces = new FloorsDAO();
-                        $result = $provinces->getAll();
+                        $floors = new FloorsDAO();
+                        $result = $floors->getAll();
                         echo json_encode($result);
                     } catch(PDOException $e){
                         echo '{"error": {"text": '.$e->getMessage().'}';
                     }
     });
     //Get floor by id
-    $this->get('floors/{id}', function ($req, $res, $args) {
-                    $id = $req->getAttribute("id");
+    $this->get('{id}', function ($req, $res, $args) {
+                    $id = $args['id'];
                 try{
                     $result = "";
-                    $floor = new Floors($id,"","","","","","","","","");
+                    $floor = new Floors($id,"","","","","","","","","","","","","","","","","","","");
                     $floors = new FloorsDAO();
                     $result = $floors->getFloor($floor);
                     echo json_encode($result);

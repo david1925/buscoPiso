@@ -182,3 +182,8 @@
 
 2018-01-14 15:52:52;;;;;;SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1;;;;;;El error esta en la clase: FloorsDAO;;;;;;El error esta en la funcion: getFeatures
 
+2018-03-03 01:28:50;;;;;;SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
+
+2018-03-03 01:31:20;;;;;;SQLSTATE[42S02]: Base table or view not found: 1146 Table 'buscopiso.user' doesn't exist;;;;;;El error esta en la clase: UsersDAO;;;;;;El error esta en la funcion: getAll
+

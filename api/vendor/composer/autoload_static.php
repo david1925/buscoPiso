@@ -16,6 +16,16 @@ class ComposerStaticInit3d6e572f49deb06562886a430a0e147d
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'Z' => 
+        array (
+            'Zend\\Validator\\' => 15,
+            'Zend\\Uri\\' => 9,
+            'Zend\\Stdlib\\' => 12,
+            'Zend\\Loader\\' => 12,
+            'Zend\\Http\\' => 10,
+            'Zend\\Escaper\\' => 13,
+            'Zend\\Config\\' => 12,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -28,6 +38,7 @@ class ComposerStaticInit3d6e572f49deb06562886a430a0e147d
         array (
             'Symfony\\Component\\Yaml\\' => 23,
             'Slim\\Views\\' => 11,
+            'Slim\\Middleware\\' => 16,
             'Slim\\' => 5,
         ),
         'P' => 
@@ -46,6 +57,7 @@ class ComposerStaticInit3d6e572f49deb06562886a430a0e147d
         ),
         'F' => 
         array (
+            'Firebase\\JWT\\' => 13,
             'FastRoute\\' => 10,
         ),
         'D' => 
@@ -62,6 +74,34 @@ class ComposerStaticInit3d6e572f49deb06562886a430a0e147d
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
+        'Zend\\Validator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-validator/src',
+        ),
+        'Zend\\Uri\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-uri/src',
+        ),
+        'Zend\\Stdlib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
+        ),
+        'Zend\\Loader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-loader/src',
+        ),
+        'Zend\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-http/src',
+        ),
+        'Zend\\Escaper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-escaper/src',
+        ),
+        'Zend\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-config/src',
+        ),
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
@@ -77,6 +117,10 @@ class ComposerStaticInit3d6e572f49deb06562886a430a0e147d
         'Slim\\Views\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/php-view/src',
+        ),
+        'Slim\\Middleware\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tuupola/slim-jwt-auth/src',
         ),
         'Slim\\' => 
         array (
@@ -101,6 +145,10 @@ class ComposerStaticInit3d6e572f49deb06562886a430a0e147d
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'FastRoute\\' => 
         array (

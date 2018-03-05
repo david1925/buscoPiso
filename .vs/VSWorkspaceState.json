@@ -4,13 +4,9 @@
     "\\api",
     "\\api\\public",
     "\\api\\src",
-    "\\api\\vendor",
-    "\\api\\vendor\\slim",
-    "\\api\\vendor\\slim\\slim",
-    "\\api\\vendor\\slim\\slim\\Slim",
-    "\\vendors",
-    "\\views"
+    "\\api\\src\\model",
+    "\\api\\src\\model\\persist"
   ],
-  "SelectedNode": "\\api\\public\\index.php",
+  "SelectedNode": "\\api\\src\\model\\UserToken.class.php",
   "PreviewInSolutionExplorer": false
 }
