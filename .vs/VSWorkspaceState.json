@@ -5,8 +5,12 @@
     "\\api\\public",
     "\\api\\src",
     "\\api\\src\\model",
-    "\\api\\src\\model\\persist"
+    "\\api\\src\\model\\persist",
+    "\\api\\src\\routes",
+    "\\DataBase",
+    "\\js",
+    "\\js\\controller"
   ],
-  "SelectedNode": "\\api\\src\\model\\UserToken.class.php",
+  "SelectedNode": "\\api\\src\\model\\persist\\UsersDAO.class.php",
   "PreviewInSolutionExplorer": false
 }

@@ -12,7 +12,7 @@ $app->group('/users/', function () use($key,$renewCookie) {
                        $result = "";
                        $users = new UsersDAO();
                        $result = $users->getAll();
-                       echo json_encode($result);                                               
+                       echo json_encode($result);
                 } catch(PDOException $e){
                        echo '{"error": {"text": '.$e->getMessage().'}';
                 }
@@ -27,6 +27,8 @@ $app->group('/users/', function () use($key,$renewCookie) {
                     $users = new UsersDAO();
                     $result = $users->getUser($user);
                     echo json_encode($result);
+                    /*echo json_encode($result);
+                       $decoded = JWT::decode($_COOKIE['api-token'], $key, array('HS256'));*/
                 } catch(PDOException $e){
                     echo '{"error": {"text": '.$e->getMessage().'}';
                 }
@@ -69,12 +71,13 @@ $app->group('/users/', function () use($key,$renewCookie) {
                     if($result==null){
         	            echo '{"error": {"text": "Username or password incorrect"}}';
                     }else{
-                        try{
-                            //$userToken = new Users($result[0]["users_id_user"],$result[0]["users_name"],$result[0]["users_firstname"],$result[0]["users_lastname"],$result[0]["users_email"],"",$result[0]["users_phone"],$result[0]["floor_description"],$result[0]["state"],$result[0]["last_login"],$result[0]["groups_groups_id_group"],$result[0]["business_office_idoffice"],$result[0]["additional_features_users_idadditional_features_users"]);
-                            $userToken = array($result[0]["users_id_user"],$result[0]["users_name"],$result[0]["users_firstname"],$result[0]["users_lastname"],$result[0]["users_email"],"",$result[0]["users_phone"],$result[0]["floor_description"],$result[0]["state"],$result[0]["last_login"],$result[0]["groups_groups_id_group"],$result[0]["business_office_idoffice"],$result[0]["additional_features_users_idadditional_features_users"]);
-                            //$userToken = new UserToken($result[0][users_id_user],$result["users_name"],$result["users_firstname"],$result["users_lastname"],$result["users_email"],$result["users_phone"],$result["floor_description"],$result["state"],$result["last_login"],$result["groups_groups_id_group"],$result["business_office_idoffice"],$result["additional_features_users_idadditional_features_users"]);
+                        try{                            
+                            $userToken = array($result[0]["users_id_user"],$result[0]["users_name"],$result[0]["users_firstname"],$result[0]["users_lastname"],$result[0]["users_email"],"",$result[0]["users_phone"],$result[0]["floor_description"],$result[0]["state"],$result[0]["last_login"],$result[0]["groups_groups_id_group"],$result[0]["business_office_idoffice"],$result[0]["additional_features_users_idadditional_features_users"]);                            
 						    $token = array('api-token' =>  JWT::encode($userToken, $key));// api token: nombre de la cookie, $result[0]: Array de los datos que se quiere encriptar para poder utilizar
 						    setcookie("api-token",JWT::encode($userToken, $key),$renewCookie);//Crea la cookie
+                            /*echo $_COOKIE['api-token'];
+                            $decoded = JWT::decode($_COOKIE['api-token'], $key, array('HS256'));
+                            print_r($decoded);*/
 					    }catch(\Exception $e) {
 						    $result=  array('error' =>  "Error generate token login");
 						    echo json_encode($result);

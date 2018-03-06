@@ -11,7 +11,7 @@
         var $airConditioner;
         var $elevator;
         var $heating;
-        var $exterior
+        var $exterior;
         var $garage;
         var $security;
 

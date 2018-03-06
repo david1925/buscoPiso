@@ -2,8 +2,8 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require_once "../src/model/ErrorLog.class.php";
-require_once "../src/model/persist/ErrorLogDAO.class.php";
+/*require_once "../src/model/ErrorLog.class.php";
+require_once "../src/model/persist/ErrorLogDAO.class.php";*/
 
 
 // Get all municipalitites

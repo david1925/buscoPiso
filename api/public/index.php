@@ -44,6 +44,7 @@ require_once __DIR__ . '/../src/model/persist/db.php';
 require_once __DIR__ . '/../src/model/Users.class.php';
 require_once __DIR__ . '/../src/model/Floors.class.php';
 require_once __DIR__ . '/../src/model/UserToken.class.php';
+require_once __DIR__ . '/../src/model/persist/AccessLogDAO.class.php';
 require_once __DIR__ . '/../src/model/persist/UsersDAO.class.php';
 require_once __DIR__ . '/../src/model/persist/FloorsDAO.class.php';
 $user = new UserToken($token);//Objeto que decodifica el token y mira si es correcto

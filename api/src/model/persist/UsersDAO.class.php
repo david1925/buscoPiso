@@ -7,15 +7,18 @@ class UsersDAO {
     }
 
     public function getAll() {
+        $class = get_class($this);
+        $function = __FUNCTION__;
         try {
           $response = array();
-          $sql = "SELECT * FROM users";
-          $response = $this->dbConnect->selectQuery($sql, $response);
+          $sql = "SELECT * FROM user";
+          $response = $this->dbConnect->selectQuery($sql, $response);          
+          $accessLog = new AccessLog("","",$_SERVER['REMOTE_ADDR'],$class,$function);
+          $accessLogDao = new AccessLogDAO();
+          $accessLogDao->InsertAccessLog($accessLog);
           return $response->fetchAll(PDO::FETCH_ASSOC);
         }catch(PDOException $pe){
           try{
-              $class = get_class($this);
-              $function = __FUNCTION__;
               $error = new ErrorLog("","",$pe->getMessage(),$class,$function);
               $errorDAO = new ErrorLogDAO();
               $errorDAO->InsertErrorLog($error);
@@ -27,6 +30,8 @@ class UsersDAO {
     }
 
     public function Login($user) {
+      $class = get_class($this);
+      $function = __FUNCTION__;
       try {
         $response = array(
             $user->getEmail(),
@@ -40,6 +45,9 @@ class UsersDAO {
                   AND users_password = md5(?)
                   AND state          = 1";
         $response = $this->dbConnect->selectQuery($sql, $response);
+        $accessLog = new AccessLog("","",$_SERVER['REMOTE_ADDR'],$class,$function);
+        $accessLogDao = new AccessLogDAO();
+        $accessLogDao->InsertAccessLog($accessLog);
         return $response->fetchAll(PDO::FETCH_ASSOC);
       } catch (PDOException $pe){
         try {
@@ -48,7 +56,7 @@ class UsersDAO {
           $errorDAO->InsertErrorLog($error);
         } catch (Exception $e){
           $errorDAO = new ErrorLogDAO();
-          $errorDAO->WriteLogFile($e->getMessage());
+          $errorDAO->WriteLogFile($error);
         }
       }
     }
