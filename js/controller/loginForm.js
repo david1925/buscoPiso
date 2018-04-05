@@ -6,8 +6,9 @@
 
     this.login = function () {
       $scope.flag;
-      $http.post(Domain + 'api/public/users/login/user', {"email" : $scope.email, "password" : $scope.password}).then(function (response) {
-        if (response.data.length>0) {
+      $http.post(Domain + 'api/public/users/login/user', { "email": $scope.email, "password": $scope.password }).then(function (response) {
+          console.log(document.cookie);
+       /* if (response.data.length>0) {
           $scope.user = new Users();
           sessionStorage.setItem("userLogged", JSON.stringify(response.data[0]));
           var userObj = JSON.parse(sessionStorage.userLogged);
@@ -32,7 +33,8 @@
         else{
           $scope.flag = false;
           return $scope.flag;
-        }
+        }*/
+      
       });      
     };
   }]);

@@ -2,12 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\api",
-    "\\api\\public",
     "\\api\\src",
     "\\api\\src\\model",
     "\\api\\src\\model\\persist",
     "\\api\\src\\routes",
-    "\\DataBase",
     "\\js",
     "\\js\\controller"
   ],

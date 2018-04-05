@@ -1,6 +1,6 @@
 
 (function(){
-    angular.module("buscoPiso", ["pascalprecht.translate", 'angularUtils.directives.dirPagination', 'satellizer']);
+    angular.module("buscoPiso", ["pascalprecht.translate", 'angularUtils.directives.dirPagination', 'satellizer', 'ngCookies']);
 
 
     angular.module("buscoPiso").config(['$translateProvider', '$authProvider', function ($translateProvider, $authProvider) {

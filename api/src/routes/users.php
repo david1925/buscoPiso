@@ -75,8 +75,8 @@ $app->group('/users/', function () use($key,$renewCookie) {
                             $userToken = array($result[0]["users_id_user"],$result[0]["users_name"],$result[0]["users_firstname"],$result[0]["users_lastname"],$result[0]["users_email"],"",$result[0]["users_phone"],$result[0]["floor_description"],$result[0]["state"],$result[0]["last_login"],$result[0]["groups_groups_id_group"],$result[0]["business_office_idoffice"],$result[0]["additional_features_users_idadditional_features_users"]);                            
 						    $token = array('api-token' =>  JWT::encode($userToken, $key));// api token: nombre de la cookie, $result[0]: Array de los datos que se quiere encriptar para poder utilizar
 						    setcookie("api-token",JWT::encode($userToken, $key),$renewCookie);//Crea la cookie
-                            /*echo $_COOKIE['api-token'];
-                            $decoded = JWT::decode($_COOKIE['api-token'], $key, array('HS256'));
+                            echo $_COOKIE['api-token'];
+                            /*$decoded = JWT::decode($_COOKIE['api-token'], $key, array('HS256'));
                             print_r($decoded);*/
 					    }catch(\Exception $e) {
 						    $result=  array('error' =>  "Error generate token login");
